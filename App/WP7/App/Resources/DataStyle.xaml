@@ -1,0 +1,85 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"> 
+
+    <!-- ********************************* -->
+    <!--     TEXAS HOLDEM DATA TEMPLATE    -->
+    <!-- ********************************* -->
+    
+    <DataTemplate x:Key="WheelItemTemplate">
+        <Border Height="150">
+            <TextBlock Text="{Binding Text}" 
+                           TextWrapping="Wrap" 
+                           Foreground="White" Width="150"
+                           VerticalAlignment="Bottom" 
+                           HorizontalAlignment="Left"
+                           FontSize="22" />
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="KickerListBoxDataTemplate">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+            <Image Source="{Binding CardImage}" Style="{StaticResource THCCardStyle}"/>
+            <TextBlock Text="{Binding CardName}" Style="{StaticResource THCSmallHeaderStyle}" />
+        </StackPanel>
+    </DataTemplate>
+
+    <ItemsPanelTemplate x:Key="HandRankItemsPanelTemplate">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" />
+    </ItemsPanelTemplate>
+    
+    <DataTemplate x:Key="HandRankDataTemplate">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+            <Image Source="{Binding CardImage}" Style="{StaticResource THCCardStyle}"/>
+            <TextBlock Text="{Binding CardName}" Style="{StaticResource THCSmallHeaderStyle}" />
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="HoleOddsListBoxDateTemplate">
+        <Grid Width="480">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="480*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" 
+                       Style="{StaticResource THCOddsSmallHeaderStyle}"
+                       Text="{Binding Description}" HorizontalAlignment="Stretch" />
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <TextBlock 
+                    Style="{StaticResource THCOddsSmallHeaderStyle}" 
+                    Text="Percent: " />
+                <TextBlock 
+                    Style="{StaticResource THCOddsSmallValueStyle}" 
+                    Text="{Binding Percent}" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                <TextBlock 
+                    Style="{StaticResource THCOddsSmallHeaderStyle}" 
+                    Text="Odds: "/>
+                <TextBlock 
+                    Style="{StaticResource THCOddsSmallValueStyle}" 
+                    Text="{Binding Odds}"/>
+            </StackPanel>
+        </Grid>
+    </DataTemplate>
+    
+    <DataTemplate x:Name="LoopingSelectorDataTemplate">
+        <TextBlock Style="{StaticResource THCStatsLargeHeaderText}" Text="{Binding}" />
+    </DataTemplate>
+
+    <ItemsPanelTemplate x:Key="CardHandNonSelectable">
+        <StackPanel Orientation="Horizontal" />
+    </ItemsPanelTemplate>
+
+    <DataTemplate x:Key="CardImageHandNonSelectable">
+        <Image Source="{Binding CardImage}"
+               Style="{StaticResource THCCardStyle}" />
+    </DataTemplate>
+    
+</ResourceDictionary>

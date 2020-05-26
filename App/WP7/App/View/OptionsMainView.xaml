@@ -1,0 +1,176 @@
+﻿<phoneNavigation:PhoneApplicationPage x:Class="TexasHoldemCalculator.View.OptionsView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Custom="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+                                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                                      xmlns:my="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
+                                      xmlns:phoneNavigation="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone" 
+                                      xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+                                      xmlns:command="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras"
+                                      x:Name="HoldemStatistics"
+                                      ApplicationBar="{StaticResource GlobalApplicationBar}"
+                                      d:DesignHeight="800" d:DesignWidth="480"
+                                      DataContext="{Binding Source={StaticResource Locator},
+                                                            Path=Options}"
+                                      Style="{StaticResource DefaultPageTransition}"
+                                      SupportedOrientations="Portrait" mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot">
+        <Grid x:Name="OptionsGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="240" />
+                <ColumnDefinition Width="240*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="78" />
+                <RowDefinition Height="78" />
+                <RowDefinition Height="78" />
+                <RowDefinition Height="78" />
+                <RowDefinition Height="78*" />
+                <RowDefinition Height="85" />
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="OptionsNumberOfPlayers"
+                       Style="{StaticResource THCOptionsLargeHeaderStyle}"
+                       Text="Number of Players" />
+            <Button Name="NumberOfPlayersButton" Grid.Row="0"
+                    Grid.Column="1" Width="155"
+                    Height="55"
+                    Content="{Binding NumberOfPlayers}"
+                    Padding="0"
+                    Style="{StaticResource RoundButtonStyle}">
+                <Custom:Interaction.Triggers>
+                    <Custom:EventTrigger EventName="Click">
+                        <command:EventToCommand x:Name="PlayersVisibilityCommand" Command="{Binding Visibility2Command}" />
+                    </Custom:EventTrigger>
+                </Custom:Interaction.Triggers>
+            </Button>
+
+
+            <TextBlock x:Name="OptionsSelectedEngineTextBlock" Grid.Row="3"
+                       Grid.Column="0"
+                       Style="{StaticResource THCOptionsLargeHeaderStyle}"
+                       Text="{Binding SelectedReplayEngine}" />
+            <Button x:Name="OptionsEngineButton" Grid.Row="3"
+                    Grid.Column="1" Grid.ColumnSpan="2"
+                    Width="155" Height="55"
+                    Content="Replay Engine" FontSize="21.333"
+                    Style="{StaticResource OptionsRoundButtonStyle}" IsEnabled="False">
+                <Custom:Interaction.Triggers>
+                    <Custom:EventTrigger EventName="Click">
+                        <command:EventToCommand x:Name="VisibilityOnCommand" Command="{Binding Visibility1Command}" />
+                    </Custom:EventTrigger>
+                </Custom:Interaction.Triggers>
+            </Button>
+
+            <!--
+                <Button x:Name="OptionsSearchFilterButton"
+                Grid.Row="3"
+                Grid.Column="0"
+                Content="Search Filter"
+                IsEnabled="False"
+                Style="{StaticResource OptionsRoundButtonStyle}"
+                Visibility="Collapsed" />
+            -->
+
+            <TextBlock x:Name="OptionsSkipScaleChangeTextBlock" Grid.Row="1"
+                       Grid.Column="0"
+                       Style="{StaticResource THCOptionsLargeHeaderStyle}"
+                       Text="Hand Skip Amount" />
+            <TextBox x:Name="OptionsSkipScaleChangeTextBox" Grid.Row="1"
+                     Grid.Column="1" Width="155"
+                     Height="55" GotFocus="StatsTextBoxGotFocus"
+                     InputScope="TelephoneNumber"
+                     Style="{StaticResource THCDataTextBoxStyle}"
+                     Template="{StaticResource THCInputTextBoxStyle}"
+                     Text="{Binding SkipScaleChange,
+                                    Mode=TwoWay,
+                                    Converter={StaticResource IntConverter}}" />
+
+            <TextBlock x:Name="OptionsPrecisionTextBlock" Grid.Row="2"
+                       Grid.Column="0"
+                       Style="{StaticResource THCOptionsLargeHeaderStyle}"
+                       Text="Precision" />
+            <Button Name="PrecisionButton" Grid.Row="2"
+                    Grid.Column="1" Width="155"
+                    Height="55"
+                    Content="{Binding Precision}"
+                    Padding="0"
+                    Style="{StaticResource RoundButtonStyle}">
+                <Custom:Interaction.Triggers>
+                    <Custom:EventTrigger EventName="Click">
+                        <command:EventToCommand x:Name="OutsVisibilityCommand" Command="{Binding VisibilityCommand}" />
+                    </Custom:EventTrigger>
+                </Custom:Interaction.Triggers>
+            </Button>
+
+            <!--
+                <TextBlock x:Name="OptionsUsernameTextBlock"
+                Grid.Row="0"
+                Grid.Column="0"
+                Style="{StaticResource THCOptionsLargeHeaderStyle}"
+                Text="Player UserId" />
+                <TextBox x:Name="OptionsUsernameTextBox"
+                Grid.Row="0"
+                Grid.Column="1"
+                Width="155"
+                Height="55"
+                GotFocus="StatsTextBoxGotFocus"
+                IsEnabled="False"
+                Style="{StaticResource THCDataTextBoxStyle}"
+                Template="{StaticResource THCInputTextBoxStyle}"
+                Text="{Binding UserName,
+                Mode=TwoWay}" />
+            -->
+
+            <StackPanel x:Name="OptionsCheckBoxStackPanel" Grid.Row="4"
+                        Grid.ColumnSpan="2" VerticalAlignment="Stretch"
+                        Orientation="Vertical">
+                <toolkit:ToggleSwitch x:Name="OptionsPreviewToggleSwitch" Content="Hand Preview"
+                                      IsChecked="{Binding HandPreview,
+                                                          Mode=TwoWay}"
+                                      Style="{StaticResource THCOptionsToggleButtonLargeHeaderStyle}" />
+                <toolkit:ToggleSwitch x:Name="OptionsHandHistoryToggleSwitch" Content="Write Hand History"
+                                      IsChecked="{Binding WriteHandHistory,
+                                                          Mode=TwoWay}"
+                                      Style="{StaticResource THCOptionsToggleButtonLargeHeaderStyle}" />
+                <Button Content="Delete Hand History" IsEnabled="{Binding IsHandHistorySaved}">
+                    <Custom:Interaction.Triggers>
+                        <Custom:EventTrigger EventName="Click">
+                            <command:EventToCommand x:Name="DeleteHandHistoryCommand" Command="{Binding DeleteHandHsitoryCommand}" />
+                        </Custom:EventTrigger>
+                    </Custom:Interaction.Triggers>
+                </Button>
+            </StackPanel>
+
+            <my:AdControl x:Name="THCOptionsAd" Grid.Row="5"
+                          Grid.ColumnSpan="2"
+                          Width="{Binding Width}"
+                          Height="{Binding Height}"
+                          Margin="0" VerticalAlignment="Center"
+                          DataContext="{Binding Source={StaticResource Locator},
+                                                Path=AdProvider}" />
+        </Grid>
+
+        <ItemsControl x:Name="DeletingHandsPopup" Grid.Row="0"
+                      Grid.RowSpan="2"
+                      DataContext="{Binding Source={StaticResource Locator}, Path=Options}"
+                      Template="{StaticResource DeletingHandsPopup}"
+                      Visibility="{Binding Visibility3}" />
+        
+        <ItemsControl x:Name="NumberOfPlayersSelectionPopup" Grid.Row="0"
+                      Grid.RowSpan="2"
+                      DataContext="{Binding Source={StaticResource Locator}, Path=Options}"
+                      Template="{StaticResource NumberOfPlayersSelectionPopup}"
+                      Visibility="{Binding Visibility2}" />
+
+        <ItemsControl x:Name="ReplayEngineSelectionPopup" Grid.Row="0"
+                      Grid.RowSpan="2"
+                      DataContext="{Binding Source={StaticResource Locator}, Path=Options}"
+                      Template="{StaticResource ReplayEnigneSelectionPopup}"
+                      Visibility="{Binding Visibility1}" />
+        
+        <ItemsControl x:Name="PrecisionSelectionPopup" Grid.Row="0"
+                      Grid.RowSpan="2"
+                      DataContext="{Binding Source={StaticResource Locator}, Path=Options}"
+                      Template="{StaticResource PrecisionSelectionPopup}"
+                      Visibility="{Binding Visibility}" />
+    </Grid>
+</phoneNavigation:PhoneApplicationPage>

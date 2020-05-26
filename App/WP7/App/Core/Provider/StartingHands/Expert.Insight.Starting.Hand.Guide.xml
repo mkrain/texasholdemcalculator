@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<StartingHands Title="Expert Insight Starting Hand Guide">
+  <Description>
+  Game: No Limit Texas Hold'em
+  Players: 6 handed
+  Conditions: Average
+  Situation:  
+    You are first to enter the pot</Description>
+  <HandHighlight>
+    <Strength Id="1" Color="255.255.0.0" Description="Raise from any position" />
+    <Strength Id="2" Color="255.60.179.113" Description="Raise only from Middle Position or later" />
+    <Strength Id="3" Color="255.255.222.173" Description="Raise only from Late Position or Button" />
+    <Strength Id="4" Color="255.173.216.230" Description="Raise only from Button" />
+    <Strength Id="5" Color="255.0.0.255" Description="Fold (or if in Big Blind, check)" />
+  </HandHighlight>
+  <Hand Name="Ace">
+    <Card Name="Ace" Strength="1" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="King" Strength="1" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Queen" Strength="1" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Jack" Strength="1" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Ten" Strength="1" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Nine" Strength="2" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Eight" Strength="2" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Seven" Strength="2" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Six" Strength="2" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Five" Strength="3" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Four" Strength="3" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Three" Strength="3" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Two" Strength="3" Suit="Club" Suited="True" Visible="True" />
+  </Hand>
+  <Hand Name="King">
+    <Card Name="Ace" Strength="1" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="King" Strength="1" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Queen" Strength="1" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Jack" Strength="1" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Ten" Strength="2" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Nine" Strength="3" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Eight" Strength="3" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Seven" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Six" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Five" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Four" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Three" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Two" Strength="5" Suit="Club" Suited="True" Visible="True" />
+  </Hand>
+  <Hand Name="Queen">
+    <Card Name="Ace" Strength="1" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="King" Strength="3" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Queen" Strength="1" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Jack" Strength="1" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Ten" Strength="2" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Nine" Strength="3" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Eight" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Seven" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Six" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Five" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Four" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Three" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Two" Strength="5" Suit="Club" Suited="True" Visible="True" />
+  </Hand>
+  <Hand Name="Jack">
+    <Card Name="Ace" Strength="1" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="King" Strength="3" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Queen" Strength="3" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Jack" Strength="1" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Ten" Strength="2" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Nine" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Eight" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Seven" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Six" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Five" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Four" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Three" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Two" Strength="5" Suit="Club" Suited="True" Visible="True" />
+  </Hand>
+  <Hand Name="Ten">
+    <Card Name="Ace" Strength="2" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="King" Strength="3" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Queen" Strength="4" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Jack" Strength="4" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Ten" Strength="1" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Nine" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Eight" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Seven" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Six" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Five" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Four" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Three" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Two" Strength="5" Suit="Club" Suited="True" Visible="True" />
+  </Hand>
+  <Hand Name="Nine">
+    <Card Name="Ace" Strength="2" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="King" Strength="4" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Queen" Strength="4" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Jack" Strength="4" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Ten" Strength="4" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Nine" Strength="1" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Eight" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Seven" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Six" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Five" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Four" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Three" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Two" Strength="5" Suit="Club" Suited="True" Visible="True" />
+  </Hand>
+  <Hand Name="Eight">
+    <Card Name="Ace" Strength="2" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="King" Strength="4" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Queen" Strength="4" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Jack" Strength="4" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Ten" Strength="4" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Nine" Strength="4" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Eight" Strength="1" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Seven" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Six" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Five" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Four" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Three" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Two" Strength="5" Suit="Club" Suited="True" Visible="True" />
+  </Hand>
+  <Hand Name="Seven">
+    <Card Name="Ace" Strength="2" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="King" Strength="4" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Queen" Strength="4" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Jack" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Ten" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Nine" Strength="4" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Eight" Strength="4" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Seven" Strength="1" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Six" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Five" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Four" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Three" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Two" Strength="5" Suit="Club" Suited="True" Visible="True" />
+  </Hand>
+  <Hand Name="Six">
+    <Card Name="Ace" Strength="3" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="King" Strength="4" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Queen" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Jack" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Ten" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Nine" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Eight" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Seven" Strength="4" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Six" Strength="2" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Five" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Four" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Three" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Two" Strength="5" Suit="Club" Suited="True" Visible="True" />
+  </Hand>
+  <Hand Name="Five">
+    <Card Name="Ace" Strength="3" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="King" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Queen" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Jack" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Ten" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Nine" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Eight" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Seven" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Six" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Five" Strength="2" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Four" Strength="4" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Three" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Two" Strength="5" Suit="Club" Suited="True" Visible="True" />
+  </Hand>
+  <Hand Name="Four">
+    <Card Name="Ace" Strength="3" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="King" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Queen" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Jack" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Ten" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Nine" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Eight" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Seven" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Six" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Five" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Four" Strength="2" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Three" Strength="5" Suit="Club" Suited="True" Visible="True" />
+    <Card Name="Two" Strength="5" Suit="Club" Suited="True" Visible="True" />
+  </Hand>
+  <Hand Name="Three">
+    <Card Name="Ace" Strength="3" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="King" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Queen" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Jack" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Ten" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Nine" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Eight" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Seven" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Six" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Five" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Four" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Three" Strength="3" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Two" Strength="5" Suit="Club" Suited="True" Visible="True" />
+  </Hand>
+  <Hand Name="Two">
+    <Card Name="Ace" Strength="3" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="King" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Queen" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Jack" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Ten" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Nine" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Eight" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Seven" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Six" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Five" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Four" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Three" Strength="5" Suit="Club" Suited="False" Visible="True" />
+    <Card Name="Two" Strength="3" Suit="Club" Suited="False" Visible="True" />
+  </Hand>
+</StartingHands>

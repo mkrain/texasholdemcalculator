@@ -1,0 +1,221 @@
+<StartingHands Title="Sklansky Basic Strategy">
+	<HandHighlight>
+		<Strength Id="1" Color="Red" />
+		<Strength Id="2" Color="LightBlue" />
+		<Strength Id="3" Color="LimeGreen" />
+		<Strength Id="4" Color="Tan" />
+		<Strength Id="5" Color="Blue" />
+		<Strength Id="6" Color="Purple" />
+		<Strength Id="7" Color="Maroon" />
+		<Strength Id="8" Color="Gray" />
+		<Strength Id="9" Color="Goldenrod" />
+	</HandHighlight>
+	<!-- Ace -->
+	<Hand Name="Ace">
+		<Card Name="12" Strength="1" Suited="False" />
+		<Card Name="11" Strength="1" Suited="True" />
+		<Card Name="10" Strength="2" Suited="True" />
+		<Card Name="9" Strength="2" Suited="True" />
+		<Card Name="8" Strength="3" Suited="True" />
+		<Card Name="7" Strength="5" Suited="True" />
+		<Card Name="6" Strength="5" Suited="True" />
+		<Card Name="5" Strength="5" Suited="True" />
+		<Card Name="4" Strength="5" Suited="True" />
+		<Card Name="3" Strength="5" Suited="True" />
+		<Card Name="2" Strength="5" Suited="True" />
+		<Card Name="1" Strength="5" Suited="True" />
+		<Card Name="0" Strength="5" Suited="True" />
+	</Hand>
+	<!-- King -->
+	<Hand Name="King">
+		<Card Name="12" Strength="2" Suited="False" />
+		<Card Name="11" Strength="1" Suited="False" />
+		<Card Name="10" Strength="2" Suited="True" />
+		<Card Name="9" Strength="3" Suited="True" />
+		<Card Name="8" Strength="4" Suited="True" />
+		<Card Name="7" Strength="7" Suited="True" />
+		<Card Name="6" Strength="7" Suited="True" />
+		<Card Name="5" Strength="7" Suited="True" />
+		<Card Name="4" Strength="7" Suited="True" />
+		<Card Name="3" Strength="7" Suited="True" />
+		<Card Name="2" Strength="7" Suited="True" />
+		<Card Name="1" Strength="7" Suited="True" />
+		<Card Name="0" Strength="7" Suited="True" />
+	</Hand>
+	<!-- Queen -->
+	<Hand Name="Queen">
+		<Card Name="12" Strength="3" Suited="False" />
+		<Card Name="11" Strength="4" Suited="False" />
+		<Card Name="10" Strength="1" Suited="False" />
+		<Card Name="9" Strength="3" Suited="True" />
+		<Card Name="8" Strength="4" Suited="True" />
+		<Card Name="7" Strength="5" Suited="True" />
+		<Card Name="6" Strength="7" Suited="True" />
+    <Card Name="5" Strength="7" Suited="True" />
+    <Card Name="4" Strength="7" Suited="True" />
+    <Card Name="3" Strength="7" Suited="True" />
+    <Card Name="2" Strength="7" Suited="True" />
+    <Card Name="1" Strength="7" Suited="True" />
+    <Card Name="0" Strength="7" Suited="True" />
+	</Hand>
+	<!-- Jack -->
+	<Hand Name="Jack">
+		<Card Name="12" Strength="4" Suited="False" />
+		<Card Name="11" Strength="5" Suited="False" />
+		<Card Name="10" Strength="5" Suited="False" />
+		<Card Name="9" Strength="1" Suited="False" />
+		<Card Name="8" Strength="3" Suited="True" />
+		<Card Name="7" Strength="4" Suited="True" />
+		<Card Name="6" Strength="6" Suited="True" />
+		<Card Name="5" Strength="8" Suited="True" />
+    <Card Name="4" Strength="8" Suited="True" />
+    <Card Name="3" Strength="8" Suited="True" />
+    <Card Name="2" Strength="8" Suited="True" />
+    <Card Name="1" Strength="8" Suited="True" />
+    <Card Name="0" Strength="8" Suited="True" />
+	</Hand>
+	<!-- Ten -->
+	<Hand Name="Ten">
+		<Card Name="12" Strength="6" Suited="False" />
+		<Card Name="11" Strength="6" Suited="False" />
+		<Card Name="10" Strength="6" Suited="False" />
+		<Card Name="9" Strength="5" Suited="False" />
+		<Card Name="8" Strength="2" Suited="False" />
+		<Card Name="7" Strength="4" Suited="True" />
+		<Card Name="6" Strength="5" Suited="True" />
+		<Card Name="5" Strength="7" Suited="True" />
+    <Card Name="4" Strength="7" Suited="True" />
+    <Card Name="3" Strength="7" Suited="True" />
+    <Card Name="2" Strength="7" Suited="True" />
+    <Card Name="1" Strength="7" Suited="True" />
+    <Card Name="0" Strength="7" Suited="True" />
+	</Hand>
+	<!-- Nine -->
+	<Hand Name="Nine">
+		<Card Name="12" Strength="8" Suited="False" />
+		<Card Name="11" Strength="8" Suited="False" />
+		<Card Name="10" Strength="8" Suited="False" />
+		<Card Name="9" Strength="7" Suited="False" />
+		<Card Name="8" Strength="7" Suited="False" />
+		<Card Name="7" Strength="3" Suited="False" />
+		<Card Name="6" Strength="4" Suited="True" />
+		<Card Name="5" Strength="5" Suited="True" />
+		<Card Name="4" Strength="8" Suited="True" />
+    <Card Name="3" Strength="8" Suited="True" />
+    <Card Name="2" Strength="8" Suited="True" />
+    <Card Name="1" Strength="8" Suited="True" />
+    <Card Name="0" Strength="8" Suited="True" />
+	</Hand>
+	<!-- Eight -->
+	<Hand Name="Eight">
+    <Card Name="12" Strength="8" Suited="False" />
+    <Card Name="11" Strength="8" Suited="False" />
+    <Card Name="10" Strength="8" Suited="False" />
+		<Card Name="9" Strength="8" Suited="False" />
+		<Card Name="8" Strength="8" Suited="False" />
+		<Card Name="7" Strength="7" Suited="False" />
+		<Card Name="6" Strength="4" Suited="False" />
+		<Card Name="5" Strength="5" Suited="True" />
+		<Card Name="4" Strength="6" Suited="True" />
+		<Card Name="3" Strength="8" Suited="True" />
+    <Card Name="2" Strength="8" Suited="True" />
+    <Card Name="1" Strength="8" Suited="True" />
+    <Card Name="0" Strength="8" Suited="True" />
+	</Hand>
+	<!-- Seven -->
+	<Hand Name="Seven">
+    <Card Name="12" Strength="8" Suited="False" />
+    <Card Name="11" Strength="8" Suited="False" />
+    <Card Name="10" Strength="8" Suited="False" />
+    <Card Name="9" Strength="8" Suited="False" />
+    <Card Name="8" Strength="8" Suited="False" />
+    <Card Name="7" Strength="8" Suited="False" />
+		<Card Name="6" Strength="8" Suited="False" />
+		<Card Name="5" Strength="5" Suited="False" />
+		<Card Name="4" Strength="5" Suited="True" />
+		<Card Name="3" Strength="6" Suited="True" />
+		<Card Name="2" Strength="8" Suited="True" />
+    <Card Name="1" Strength="8" Suited="True" />
+    <Card Name="0" Strength="8" Suited="True" />
+	</Hand>
+	<!-- Six -->
+	<Hand Name="Six">
+    <Card Name="12" Strength="8" Suited="False" />
+    <Card Name="11" Strength="8" Suited="False" />
+    <Card Name="10" Strength="8" Suited="False" />
+    <Card Name="9" Strength="8" Suited="False" />
+    <Card Name="8" Strength="8" Suited="False" />
+    <Card Name="7" Strength="8" Suited="False" />
+    <Card Name="6" Strength="8" Suited="False" />
+		<Card Name="5" Strength="8" Suited="False" />
+		<Card Name="4" Strength="6" Suited="False" />
+		<Card Name="3" Strength="5" Suited="True" />
+		<Card Name="2" Strength="7" Suited="True" />
+    <Card Name="1" Strength="7" Suited="True" />
+    <Card Name="0" Strength="7" Suited="True" />
+	</Hand>
+	<!-- Five -->
+	<Hand Name="Five">
+    <Card Name="12" Strength="8" Suited="False" />
+    <Card Name="11" Strength="8" Suited="False" />
+    <Card Name="10" Strength="8" Suited="False" />
+    <Card Name="9" Strength="8" Suited="False" />
+    <Card Name="8" Strength="8" Suited="False" />
+    <Card Name="7" Strength="8" Suited="False" />
+    <Card Name="6" Strength="8" Suited="False" />
+    <Card Name="5" Strength="8" Suited="False" />
+		<Card Name="4" Strength="8" Suited="False" />
+		<Card Name="3" Strength="6" Suited="False" />
+		<Card Name="2" Strength="6" Suited="True" />
+		<Card Name="1" Strength="7" Suited="True" />
+    <Card Name="0" Strength="7" Suited="True" />
+	</Hand>
+	<!-- Four -->
+	<Hand Name="Four">
+    <Card Name="12" Strength="8" Suited="False" />
+    <Card Name="11" Strength="8" Suited="False" />
+    <Card Name="10" Strength="8" Suited="False" />
+    <Card Name="9" Strength="8" Suited="False" />
+    <Card Name="8" Strength="8" Suited="False" />
+    <Card Name="7" Strength="8" Suited="False" />
+    <Card Name="6" Strength="8" Suited="False" />
+    <Card Name="5" Strength="8" Suited="False" />
+    <Card Name="4" Strength="8" Suited="False" />
+		<Card Name="3" Strength="8" Suited="False" />
+		<Card Name="2" Strength="7" Suited="False" />
+		<Card Name="1" Strength="7" Suited="True" />
+		<Card Name="0" Strength="8" Suited="True" />
+	</Hand>
+	<!-- Three -->
+	<Hand Name="Three">
+    <Card Name="12" Strength="8" Suited="False" />
+    <Card Name="11" Strength="8" Suited="False" />
+    <Card Name="10" Strength="8" Suited="False" />
+    <Card Name="9" Strength="8" Suited="False" />
+    <Card Name="8" Strength="8" Suited="False" />
+    <Card Name="7" Strength="8" Suited="False" />
+    <Card Name="6" Strength="8" Suited="False" />
+    <Card Name="5" Strength="8" Suited="False" />
+    <Card Name="4" Strength="8" Suited="False" />
+    <Card Name="3" Strength="8" Suited="False" />
+    <Card Name="2" Strength="7" Suited="False" />
+		<Card Name="1" Strength="7" Suited="False" />
+		<Card Name="0" Strength="8" Suited="True" />
+	</Hand>
+	<!-- Two -->
+	<Hand Name="Two">
+    <Card Name="12" Strength="8" Suited="False" />
+    <Card Name="11" Strength="8" Suited="False" />
+    <Card Name="10" Strength="8" Suited="False" />
+    <Card Name="9" Strength="8" Suited="False" />
+    <Card Name="8" Strength="8" Suited="False" />
+    <Card Name="7" Strength="8" Suited="False" />
+    <Card Name="6" Strength="8" Suited="False" />
+    <Card Name="5" Strength="8" Suited="False" />
+    <Card Name="4" Strength="8" Suited="False" />
+    <Card Name="3" Strength="8" Suited="False" />
+    <Card Name="2" Strength="7" Suited="False" />
+    <Card Name="1" Strength="7" Suited="False" />
+		<Card Name="0" Strength="7" Suited="False" />
+	</Hand>
+</StartingHands>

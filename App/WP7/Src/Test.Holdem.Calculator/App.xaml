@@ -1,0 +1,32 @@
+﻿<Application 
+    x:Class="Test.Holdem.Calculator.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:Testing="clr-namespace:Microsoft.Silverlight.Testing.Client;assembly=Microsoft.Silverlight.Testing"
+    xmlns:WindowsPhone7Unleashed="clr-namespace:Test.Holdem.Calculator">
+
+    <!--Application Resources-->
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DanielVaughan.WindowsPhone7Unleashed.Examples.Silverlight;component/DefaultResources.xaml" />
+            </ResourceDictionary.MergedDictionaries-->
+            <!--ValueConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" /-->
+            <!-- Add these. -->
+            <WindowsPhone7Unleashed:TypeNameConverter x:Name="typeNameConverter" />
+            <Testing:FontWeightConverter x:Name="fontWeightConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+
+    <Application.ApplicationLifetimeObjects>
+        <!--Required object that handles lifetime events for the application-->
+        <shell:PhoneApplicationService 
+            Launching="ApplicationLaunching" 
+            Closing="ApplicationClosing" 
+            Activated="ApplicationActivated" 
+            Deactivated="ApplicationDeactivated"/>
+    </Application.ApplicationLifetimeObjects>
+
+</Application>

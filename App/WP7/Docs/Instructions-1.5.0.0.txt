@@ -1,0 +1,463 @@
+
+
+
+
+
+Texas Holdem Calculator 1.5.0.0 (stable)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.	Contents
+
+
+
+Texas Holdem Calculator 1.5.0.0 (stable)	1
+1.	Contents	2
+2.	Introduction	3
+3.	Installation and Running	3
+4.	Application Features	3
+5.	Main Tab	3
+5.1	Pot Odds Calculator	4
+5.2	Hand Simulations	5
+5.3	Context Menu Options	5
+6.	Hand History Tab	6
+7.	Stats Tab	7
+7.1	Runner-Runner Odds	7
+7.2	Ace and Card against Bigger Ace Hole Cards	7
+8.	Hands Tab	8
+9.	Hole Odds Tab	8
+10.	Options Tab	8
+10.1	Hand History	8
+10.2	Holdem Calculator	8
+10.3	General	9
+11.	Replay Engine	9
+12.	Card Themes	9
+12.1	Adding Custom Themes	9
+12.2	Custom Theme Folder Content	10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.	Introduction
+
+The Texas Holdem Calculator (THC) application aides in the calculation of pot/hand odds 
+for Texas Hold'em players.  There is also in the ability to replay hands from various 
+sources as well as save the auto-generated hands for later review.
+
+
+3.	Installation and Running
+
+*	Downloaded and extract the .cab from the following URL:
+*	https://sourceforge.net/project/showfiles.php?group_id=239546&package_id=2919
+30 upload to your PPC, double-click and follow the on screen instructions.
+*	Double-click the provided shortcut in the programs menu.  Alternatively you can run 
+the executable from "/Program Files/TexasHoldemCalculator.exe".
+*	Included is the .NET 3.5 redistributable or alternatively you can go to: 
+http://www.microsoft.com/downloads/details.aspx?FamilyID=E3821449-3C6B-
+42F1-9FD9-0041345B3385&displaylang=en
+
+
+4.	Application Features
+
+A splash screen will display while the calculator initializes.  Once the splash ends you will 
+be at the main calculator tab (labeled "Hand").  The application consists of the following 
+tabs:
+
+*	Hand - For current pot odds/hand odds and hand simulation.
+*	History - The ability to review hand history for a given engine.
+*	Stats - Contains additional statistics, etc.
+*	Hands - Some common starting hands to play.
+*	Hole Odds - Odds for pocket pairs against various hands.
+*	Options - With sub tabs: Hand History, Holdem Calculator, General.
+
+
+5.	Main Tab
+
+The main tab consists of the following areas:
+
+*	5 pre-drawn game cards (burn cards have been removed), including the flop, turn 
+and river.
+*	Pot size text box, this can be changed by clicking on it.
+*	Bet size text box, this can be changed by clicking on it.
+*	Number of outs text box, as with the pot and bet size this can be changed.
+*	Pot/Bet percentage label
+*	Hand odds ratio label.
+*	Flop/Turn/River percentage labels.
+*	Hole cards (displayed)
+*	New hand button. 
+
+5.1	Pot Odds Calculator
+
+By clicking the pot size textbox an input dialog is displayed.  You can enter a new value 
+and click OK to accept or cancel to return to the previous one.  The same is true for the 
+bet size textbox and outs textbox.  However, the total number outs will be adjusted to a 
+max of 45/46/47 (depending on where you are in the hand) for outs greater than that 
+amount, i.e. it's not possible to have more than 47 outs.
+
+After entering any value the labels are adjusted accordingly:
+
+
+1.	Pot size shows the pot to bet ratio for example, pot of 10 and bet of 1 is a 10:1 ratio.
+2.	Bet size label is the maximum bet you can call based on your outs and the pot size.
+3.	The hands odds label is your hand ratio showing how likely you are to draw to a hand 
+with the number of outs selected.  For example with 4 outs, and precision set to 0, 
+you are a 5:1 underdog to make your hand.
+4.	The make flop label is the hand odds as a percentage, for example with 4 outs and 
+being a 5:1 underdog you will make your hand on the flop 16% of the time.
+5.	Similarly to the flop the turn shows how likely you are to make your hand by 
+percentage.  Using the flop numbers you will make your hand 9% of the time.
+6.	On the turn using the flop ratios you will make your hand 9% of the time.
+
+
+When the percentage that you are likely to draw your out yields a positive expectation, 
+the Flop, River or Turn percentage label will show a green back color.  If it is negative it 
+will show as red.  This is an indicator that you will lose money in the long run so you in 
+most cases should not continue betting.
+      Similar to the hand odds back color the bet size textbox will be red if you the bet 
+you need to make is more than the maximum that you can call.  For example with 4 outs 
+and a Pot size of 500 with a bet to call of 125 you are a 5:1 underdog and will only hit 
+your hand 16% of the time, with precision set to 0.  Your maximum callable bet is 82 so 
+in this case you will lose money in the long run so the bet label would be red.  However, 
+if the bet was less than or equal to 82 in the worst case you would break even so your 
+expectation is at worst zero.  Any bet less than the maximum would show a green label.
+      
+5.2	Hand Simulations
+
+The 5 pre-drawn cards, flop, turn and river and hole cards are generated based on a 
+simulated deal.  A randomized set of cards is dealt every time the "New Hand" button is 
+pressed.  Depending on the number of players dealt to, the default is 9, based on the 
+menu setting; you will receive two consecutive cards or the first card and the n + 1 card.  
+For example for a two player deal you receive card one and card 3.  
+
+When the flop, turn and river are dealt a burn card is removed to simulate an actual 
+Texas Hold'em game.  By simulating hands you can practice making decision based on 
+your pot odds to see if your skills are getting better or worse.  For convenience a preview 
+checkbox, in the Hand History options sub-tab, has been added.  If you do not want to 
+simulate a card for card game check the "Preview" checkbox, in the Holdem Calculator 
+sub tab for Options, to show all cards simultaneously.  On every hand thereafter, the flop, 
+turn and river cards will be shown.  The cards can be clicked in order to reveal them, as a 
+convenience by clicking the river card, all of the cards are revealed.
+      
+      
+5.2.1	Generated Hand History
+
+Handy history is saved to a file, by default it's "HoldemHandHistory_YYYY_MM_dd", 
+located in "\Program Files\Texas Holdem Calculator\HandHistory\".  If necessary the 
+location can be changed by setting the hand history directory in the Hand History sub-tab 
+of the options menu.  Only one file per day is created in order to minimize the number of 
+files on disk.  Every time a hand is generated, it is stored until application exit.  When the 
+application closes the hand history is saved to the file, this includes previous history 
+stored in the file.  As a convenience a ReplayEngine ( HandHistoryReplayEngine ) is 
+created and made selectable in the "Selected Engine" dropdown of the Hand History 
+sub-tab in the options menu.  However, there are no statistics since this is an auto-
+generated hand.
+
+
+5.3	Context Menu Options
+
+The context menu can be seen by pressing and holding in any part of the application.  The 
+menu structure is as follows:
+ 
+1.	Exit. - Exits the application.
+ 
+
+6.	Hand History Tab
+
+The Texas Hold'em Calculator has the ability to playback hands from popular online 
+poker sites or any file depending on the engine.  For this release you can playback hands 
+from games you have played at both PokerStars and PokerStars.Net as well as the auto-
+generated hands.  Although there is a Fulltilt Poker option, it is included for developers 
+to use as a template.  The history tab contains the following areas:
+
+
+*	5 game cards (as they appeared in the hand history), including the flop, turn and 
+river.
+*	Hole cards (displayed)
+*	Game description with Tournament Id label appended.
+*	Game Id label.
+*	Date and time label.
+*	Hand number, i.e. Hand 1 of 121, 39 for this game.
+*	Navigation slider for reviewing any of the hands.
+*	Skip to hand button for navigating to a specific hand.
+*	Load button, for loading a single file or directory.
+*	Stats button, for reviewing statistics for the current game and all hands combined.
+
+
+   Clicking the "Load" button brings up a dialog where you can choose either a folder(s) 
+or file(s).  The file dialog automatically selects folders and allows you to select any 
+number of folders and files.  If the recursive search is on, see the options section under 
+Hand History, when a folder is selected each file with the given filter type is checked for 
+hand history detail depending on the engine selected, again in the options tab.  As a 
+convenience the last loaded directory is stored for the next file load.  If any hand history 
+is found the last hand is loaded and the hole cards are displayed.  If the preview 
+checkbox, found in the Hand History options sub-tab, is selected the Flop/Turn/River are 
+displayed as well.  The cards can be clicked in order to reveal them, as a convenience by 
+clicking the river card; all of the cards are revealed. By using the navigation slider each 
+hand history can be shown from first to last.  Clicking on the slider increments the hand 
+by the skip value defined in the Hand History sub-tab of the options menu.  Alternatively 
+you can use the scroll wheel or navigation pad to skip one hand at a time.  The "Skip To 
+Hand" button allows you to navigate to a specific hand.  Currently the username is used 
+to determine if the selected user won the hand.  If this is the case the "Stats" button will 
+turn green.  By default you cannot click the "Stats" button until at least on hand history 
+has been loaded.
+   
+The "Stats" button allows you to view current statistics from the current game and all 
+games collectively.  You can view the following in the "Hand History Stats" window:
+   
+   
+*	Amount won [Game]
+*	Amount won [All]
+*	Amount won per hand [Game]
+*	Amount won per hand [All]
+*	Amount won per hand [Won]
+*	Hands won [Game]
+*	Hands won [All]
+
+
+The [Game] tag indicates the current game or tournament if that is the case.  Whereas the 
+[All] is for every hand history that has been loaded.  Finally [Won] indicates this statistic 
+is based on only winning hands.  Closing the window brings you back to the Hand 
+History tab.
+   
+   
+7.	Stats Tab
+
+The stats tab offers two additional statistics that can come into consideration when 
+playing Texas Hold'em.  Runner-runner odds and the chance that your hole hand, 
+containing an Ace, is up against a bigger Ace.
+      
+7.1	  Runner-Runner Odds
+
+This is simply the probability of making your hand with two consecutive outs being 
+drawn.  You simply make sure the outs on the "Hand" tab are set appropriately.  For 
+example with 4 outs you are a 179:1 underdog, with precision set to 0, to draw two 
+consecutive outs to make your hand.
+
+
+7.2	  Ace against a Bigger Kicker
+
+This statistics is based on hole cards only.  Simply change the player's textbox by clicking 
+and setting the appropriate number of players.  The textbox will automatically adjust to 
+23 players if more are selected since it is impossible to deal to more with only 52 cards 
+per deck.  After changing the number of outs, select your next whole card 2 - King and 
+the probability, ratio and percent labels will automatically be calculated.  For example, 
+a set of hole cards A2 with 9 players has a probability of .65 or 65% chance of facing an 
+Ace with a larger kicker.
+      
+7.3	Pair against a Bigger Pair
+
+This statistics is based on hole cards only.  Simple change the kicker dropdown box or 
+the player textbox (number of players), to calculate the new value.  The static shows the 
+probability that the pocket pair faces a bigger pair.  For a detailed explanation visit: 
+Poker Probability: Pocket Pairs.  Currently Pma, (see previous link), is not used in the 
+calculation, however, the statistics should be used as a guideline and are provided as-is.
+      
+      
+8.	Hands Tab
+
+The hands tab contains two sets of recommended hands based on David Sklansky's work.  
+The default is the modified which shows a tighter set of hands versus the basic which is 
+a list of all playable hands but not necessarily best in all positions.
+
+
+9.	Hole Odds Tab
+
+The Hold Odds tab shows a list of hole cards against various opposing hand rankings.  
+For example a High pocket pair versus a lower is an 80.3% favorite to 19.7% underdog.  
+These are useful in determining whether or not to call an All-In bet.
+
+
+10.	Options Tab
+
+There are three sub-tabs for options: "Holdem Calculator", "Hand History" and 
+"General".
+
+
+10.1	 Hand History
+
+*	Selected Engine - Choose the hand replay engine to use.
+*	Skip Scale Change - Change the skip amount when using the hand slider.
+*	Search Filter - Which type of file to display when selecting hand to replay.
+*	Player UserId - UserId for the player who's hole cards are displayed.
+*	Select Hand History Directory - The directory to save auto-generated hands to.
+*	Select Replay Engine Directory - Where replay engines are located.
+*	Preview - When selected Flop, Turn and River are displayed.
+*	Recursive search - When checked, sub-directories are searched.
+*	Write Hand History - When checked save the auto-generated hand history.
+
+
+10.2	 Holdem Calculator
+
+*	Calc Precision - Whether to use 0, 1 or 2 digits when showing statistics.
+*	Deck Theme - The theme for cards displayed in history and the calculator.
+*	Players To Deal - The number of players to deal to for hand simulations.
+*	Preview - When selected Flop, Turn and River are displayed.
+*	Selected Theme Directory - Directory where themes are stored.
+
+
+10.3	 General
+
+*	Suppress Popups - Suppresses any popup windows, excluding statistics.
+
+
+11.	Replay Engine
+
+	The Texas Hold'em Calculator has the ability to allow anyone to customize the 
+way hand history is determined.  That is to say that anyone wishing to add a custom 
+engine to the application can do so.  All that is required is following the ReplayEngine 
+API.  For those wishing to do so, the Fulltilt and PokerStars Replay Engines can serve as a 
+guide.  After creating the satellite assembly, simply drop it in the ReplayEngine 
+directory.  This is "\Program Files\Texas Hold'em Calculator\ReplayEngineAssemblies\", 
+by default.  However, the configuration, "Holdem.Configuration.dll.config" houses a key 
+that defines where this directory, which can be changed.  The API will be described in 
+full during future releases if any.
+
+12.	Card Themes
+
+	All card images can be changed by selecting the appropriate theme option in the 
+Holdem Calculator sub-tab of the options menu.  These themes are located in the 
+directory specified by the Theme Directory textbox; it can be changed if desired.  By 
+default there is one embedded theme "Border" which is always displayed at the end of 
+the list.  If no additional themes are available or if any images are missing for the 
+selected theme the default ones will be used.
+
+12.1	  Adding Custom Themes
+
+	Adding a custom theme is simply a matter of adding images in a static directory 
+structure using static image names.  For example, adding a theme named "Smoke" 
+needs to have a directory named "Smoke" in the Theme folder, if the theme directory is 
+"Program Files/Texas Holdem Calculator/CardThemes" then add a top level folder:
+
+"Program Files/Texas Holdem Calculator/CardThemes/Smoke"
+
+The following directories may be added depending on the desired image to update:
+
+*	"Program Files/Texas Holdem Calculator/CardThemes/Smoke/Backs"
+*	"Program Files/Texas Holdem Calculator/CardThemes/Smoke/Club"
+*	"Program Files/Texas Holdem Calculator/CardThemes/Smoke/Diamond"
+*	"Program Files/Texas Holdem Calculator/CardThemes/Smoke/Hands"
+*	"Program Files/Texas Holdem Calculator/CardThemes/Smoke/Heart"
+*	"Program Files/Texas Holdem Calculator/CardThemes/Smoke/Spade"
+
+12.2	  Custom Theme Folder Content
+
+Each folder that is specified must follow the specified naming convention if the desired 
+images are to be used by the Theme Manager.
+
+Backs Folder:
+	Contains one image: 
+*	CardBack.jpg
+
+Club:
+	Contains 13 images, where 0c is 2 of clubs and 12c is Ace of clubs: 
+*	0c.jpg
+*	1c.jpg
+*	2c.jpg
+*	3c.jpg
+*	4c.jpg
+*	5c.jpg
+*	6c.jpg
+*	7c.jpg
+*	8c.jpg
+*	9c.jpg
+*	10c.jpg
+*	11c.jpg
+*	12c.jpg
+
+Diamond:
+	Contains 13 images, where 0d is 2 of diamonds and 12d is Ace of diamonds:
+*	0d.jpg
+*	1d.jpg
+*	2d.jpg
+*	3d.jpg
+*	4d.jpg
+*	5d.jpg
+*	6d.jpg
+*	7d.jpg
+*	8d.jpg
+*	9d.jpg
+*	10d.jpg
+*	11d.jpg
+*	12d.jpg
+
+Heart:
+	Contains 13 images, where 0h is 2 of hearts and 12h is Ace of hearts:
+*	0h.jpg
+*	1h.jpg
+*	2h.jpg
+*	3h.jpg
+*	4h.jpg
+*	5h.jpg
+*	6h.jpg
+*	7h.jpg
+*	8h.jpg
+*	9h.jpg
+*	10h.jpg
+*	11h.jpg
+*	12h.jpg
+
+Spade:
+	Contains 13 images, where 0s is 2 of spades and 12s is Ace of spades:
+*	0s.jpg
+*	1s.jpg
+*	2s.jpg
+*	3s.jpg
+*	4s.jpg
+*	5s.jpg
+*	6s.jpg
+*	7s.jpg
+*	8s.jpg
+*	9s.jpg
+*	10s.jpg
+*	11s.jpg
+*	12s.jpg
+
+Hands:
+	Consists of 2 images, where StartingHandsA is adjusted and StartingHandsB is 
+the basic starting hands: 
+*	StartingHandsA.bmp
+*	StartingHandsB.bmp
+
+Currently the card names are case sensitive and any additional images will be ignored.  
+There is currently no limit to the number of themes that can be added.  After selecting 
+the theme in the options menu all cards will be updated.
+Texas Hold'em Calculator 1.5.0.0  
+2009
+
+Document version 1.5.0.0	Page 1
+

@@ -1,0 +1,22 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="clr-namespace:TexasHoldemCalculator.ViewModel"
+    xmlns:controls="clr-namespace:TexasHoldemCalculator.Core.Controls"
+    xmlns:service="clr-namespace:TexasHoldemCalculator.Service"
+    mc:Ignorable="d">
+
+    <!-- ********************************* -->
+    <!--       TEXAS HOLDEM CONVERTER      -->
+    <!-- ********************************* -->
+
+    <viewModel:HoldemControlVisibilityConverter x:Key="VisibilityConverter" />
+    <controls:HoldemControlBoolVisibilityConverter x:Key="BoolVisibilityConverter" />
+    <controls:HoldemStatsIntConverter x:Key="IntConverter" />
+    <controls:CardImageConverter x:Key="ImageConverter" />
+
+    <service:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+
+</ResourceDictionary>

@@ -1,0 +1,34 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+    xmlns:Shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone">
+    
+    <!-- ********************************* -->
+    <!-- TEXAS HOLDEM CALCULATOR RESOURCES -->
+    <!-- ********************************* -->
+    <Shell:ApplicationBar x:Key="GlobalApplicationBar" IsVisible="False" IsMenuEnabled="True">
+        <Shell:ApplicationBar.MenuItems>
+            <Shell:ApplicationBarMenuItem x:Name="InfoMenuItem" Text="About" />
+            <Shell:ApplicationBarMenuItem x:Name="HoleOddsMenuItem" Text="Hole Odds" />
+            <Shell:ApplicationBarMenuItem x:Name="SettingsMenuItem" Text="Settings" />
+        </Shell:ApplicationBar.MenuItems>
+        <Shell:ApplicationBarIconButton x:Name="CalculaterAppIconButton" IconUri="Images/Icons/256/Blue.Calculator.png" Text="Main" />
+        <Shell:ApplicationBarIconButton x:Name="HistoryAppIconButton" IconUri="Images/Icons/256/Blue.Folder.png" Text="History" />
+        <Shell:ApplicationBarIconButton x:Name="StatisticsAppIconButton" IconUri="Images/Icons/256/Blue.Stats.png" Text="Stats" />
+        <Shell:ApplicationBarIconButton x:Name="StartingHandsAppIconButton" IconUri="Images/Icons/256/Starting.Hands.png" Text="Starting Hands" />
+    </Shell:ApplicationBar>
+
+    <!--Shell:ApplicationBar x:Key="GlobalApplicationBar" IsVisible="True" IsMenuEnabled="True">
+        <Shell:ApplicationBar.MenuItems>
+            <Shell:ApplicationBarMenuItem x:Name="InfoMenuItem" Click="AboutMenuItemClick" Text="About" />
+            <Shell:ApplicationBarMenuItem x:Name="HoleOddsMenuItem" Click="HoleOddsMenuItemClick" Text="Hole Odds" />
+    <Shell:ApplicationBarMenuItem x:Name="StartingHandsMenuItem" Click="StartingHandsSelectionMenuItemClick" Text="Settings" />
+            <Shell:ApplicationBarMenuItem x:Name="StartingHandsMenuItem" Click="StartingHandsSelectionMenuItemClick" Text="Starting Hands" />
+        </Shell:ApplicationBar.MenuItems>
+        <Shell:ApplicationBarIconButton x:Name="CalculaterAppIconButton" Click="CalculaterMenuItemClick" IconUri="../Images/Icons/256/Blue.Calculator.png" Text="Main" />
+        <Shell:ApplicationBarIconButton x:Name="HistoryAppIconButton" Click="HistoryMenuItemClick" IconUri="../Images/Icons/256/Blue.Folder.png" Text="History" />
+        <Shell:ApplicationBarIconButton x:Name="StatisticsAppIconButton" Click="StatisticsMenuItemClick" IconUri="../Images/Icons/256/Blue.Stats.png" Text="Stats" />
+        <Shell:ApplicationBarIconButton x:Name="OptionsAppIconButton" Click="OptionsMenuItemClick" IconUri="../Images/Icons/256/Blue.Settings.png" Text="Options" />
+    </Shell:ApplicationBar-->
+
+</ResourceDictionary>

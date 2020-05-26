@@ -1,0 +1,888 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1F6EC3C4-968C-4926-9A48-8A0D3CE63CCA}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TexasHoldemCalculator</RootNamespace>
+    <AssemblyName>TexasHoldemCalculator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>TexasHoldemCalculator.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>TexasHoldemCalculator.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.30816.0</ExpressionBlendVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Exe\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;DEVICE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Exe\Release\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;DEVICE;SkipPostSharp</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Core">
+      <HintPath>..\packages\Common\Common.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DH.Scrypt, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Src\Test.Holdem.Calculator\Bin\Debug\DH.Scrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>..\packages\MvvmLightLibs.4.4.32.1\lib\sl4-wp71\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras">
+      <HintPath>..\packages\MvvmLightLibs.4.4.32.1\lib\sl4-wp71\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Advertising.Mobile, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\3rd Party\Microsoft\Advertising\Microsoft.Advertising.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Advertising.Mobile.UI, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\3rd Party\Microsoft\Advertising\Microsoft.Advertising.Mobile.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Devices.Sensors" />
+    <Reference Include="Microsoft.Expression.Interactions" />
+    <Reference Include="Microsoft.Live">
+      <HintPath>..\packages\LiveSDK.5.5\lib\WindowsPhone71\Microsoft.Live.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Live.Controls">
+      <HintPath>..\packages\LiveSDK.5.5\lib\WindowsPhone71\Microsoft.Live.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="Microsoft.Phone.Reactive" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MvvmLightLibs.4.4.32.1\lib\sl4-wp71\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="mscorlib.Extensions" />
+    <Reference Include="Ninject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\SimpleHealthTracker\App\WP7\Full\packages\Ninject.3.0.1.10\lib\sl4-windowsphone71\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Observable" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Interactivity, Version=3.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.4.4.32.1\lib\sl4-wp71\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+    <Reference Include="YourLastAboutDialog">
+      <HintPath>..\packages\YLAD.2.1.0\lib\wp71\YourLastAboutDialog.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Controls\AboutTips.xaml.cs">
+      <DependentUpon>AboutTips.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Controls\CircularProgressBar.xaml.cs">
+      <DependentUpon>CircularProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Controls\CircularProgressBarViewModel.cs" />
+    <Compile Include="Core\Controls\GridUtils.cs" />
+    <Compile Include="Core\Controls\HoldemControlBoolVisibilityConverter.cs" />
+    <Compile Include="Core\Controls\HoldemKickerSelector.xaml.cs">
+      <DependentUpon>HoldemKickerSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Controls\LinqToVisualTree.cs" />
+    <Compile Include="Core\Controls\ListBox.xaml.cs" />
+    <Compile Include="Core\Controls\PiePiece.cs" />
+    <Compile Include="Core\Controls\SegmentedProgressBarViewModel.cs" />
+    <Compile Include="Core\Controls\SplashPopup.xaml.cs">
+      <DependentUpon>SplashPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Controls\StartingHandConverter.cs" />
+    <Compile Include="Core\Controls\StartingHandsGrid.xaml.cs">
+      <DependentUpon>StartingHandsGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Controls\Utils.cs" />
+    <Compile Include="Core\Converter\HoldemConverter.cs" />
+    <Compile Include="Core\Entities\Cards\Card.cs" />
+    <Compile Include="Core\Entities\Cards\CardKicker.cs" />
+    <Compile Include="Core\Entities\Cards\CardTheme.cs" />
+    <Compile Include="Core\Entities\Cards\HandReplayInfo.cs" />
+    <Compile Include="Core\Entities\Cards\ICard.cs" />
+    <Compile Include="Core\Entities\Collections\HandHistoryWriterCollection.cs" />
+    <Compile Include="Core\Entities\Collections\HoldemBaseCollection.cs" />
+    <Compile Include="Core\Entities\Configuration\HoldemConfigOptions.cs" />
+    <Compile Include="Core\Entities\SkyDrive\SkyDriveStorage.cs" />
+    <Compile Include="Core\Entities\SkyDrive\WindowsLiveAuthorizationCode.cs" />
+    <Compile Include="Core\Entities\SkyDrive\WindowsLiveProfile.cs" />
+    <Compile Include="Core\Entities\StartingHands\DigitDataSource.cs" />
+    <Compile Include="Core\Entities\StartingHands\IntRangeDataSource.cs" />
+    <Compile Include="Core\Entities\StartingHands\ListLoopingDataSource.cs" />
+    <Compile Include="Core\Entities\StartingHands\LoopingDataSourceBase.cs" />
+    <Compile Include="Core\Entities\Statistics\HandHistoryStats.cs" />
+    <Compile Include="Core\Entities\Statistics\HandStats.cs" />
+    <Compile Include="Core\Entities\Statistics\HoleOdds.cs" />
+    <Compile Include="Core\Entities\Statistics\MaxBetException.cs" />
+    <Compile Include="Core\Entities\Statistics\NumberOfOutsException.cs" />
+    <Compile Include="Core\Entities\Statistics\NumberOfPlayersException.cs" />
+    <Compile Include="Core\Entities\Statistics\PotSizeException.cs" />
+    <Compile Include="Core\Entities\Statistics\PrecisionException.cs" />
+    <Compile Include="Core\Generator\CardGenerator.cs" />
+    <Compile Include="Core\Generator\DeckGenerator.cs" />
+    <Compile Include="Core\Generator\NumberGenerator.cs" />
+    <Compile Include="Core\Generator\PrimitiveGenerators.cs" />
+    <Compile Include="Core\Provider\Ads\BaseAdProvider.cs" />
+    <Compile Include="Core\Provider\Ads\LargeAdProvider.cs" />
+    <Compile Include="Core\Provider\Ads\SmallAdProvider.cs" />
+    <Compile Include="Core\Provider\CardThemeManager.cs" />
+    <Compile Include="Core\Provider\Database\DatabaseConfiguration.cs" />
+    <Compile Include="Core\Provider\Database\HandHistoryDataContext.cs" />
+    <Compile Include="Core\Provider\Database\HandHistoryDataContextWrapper.cs" />
+    <Compile Include="Core\Provider\Helper\AccelerometerHelper.cs" />
+    <Compile Include="Core\Provider\HoldemSerializer.cs" />
+    <Compile Include="Core\Provider\IconProvider.cs" />
+    <Compile Include="Core\Provider\SkyDriveSecurityProvider.cs" />
+    <Compile Include="Core\Provider\StartingHandManager.cs" />
+    <Compile Include="Core\Resource\HoldemResource.cs" />
+    <Compile Include="Core\Resource\HoldemResource.Designer.cs">
+      <DependentUpon>HoldemResource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Security\EncryptionProvider.cs" />
+    <Compile Include="Core\Security\ScopeProvider.cs" />
+    <Compile Include="Core\Security\SecurityOptionsProvider.cs" />
+    <Compile Include="Core\Statistics\HoldemStatisticsBase.cs" />
+    <Compile Include="Core\Statistics\PokerHandOdds.cs" />
+    <Compile Include="Core\Statistics\PoketPairOdds.cs" />
+    <Compile Include="Core\Statistics\PotOdds.cs" />
+    <Compile Include="Interfaces\AdProviderMapping.cs" />
+    <Compile Include="Interfaces\Card\CardValue.cs" />
+    <Compile Include="Interfaces\Card\ICard.cs" />
+    <Compile Include="Interfaces\Card\ICardKicker.cs" />
+    <Compile Include="Interfaces\Card\ICardTheme.cs" />
+    <Compile Include="Interfaces\Card\ICardThemeManager.cs" />
+    <Compile Include="Interfaces\Card\ICardValue.cs" />
+    <Compile Include="Interfaces\Configuration\IHoldemConfigOptions.cs" />
+    <Compile Include="Interfaces\Configuration\IHoldemConfiguration.cs" />
+    <Compile Include="Interfaces\Configuration\IHoldemConfigurationKeys.cs" />
+    <Compile Include="Interfaces\Converter\IConverter.cs" />
+    <Compile Include="Interfaces\Database\DatabaseDeletedEventArgs.cs" />
+    <Compile Include="Interfaces\Database\HandHistoryAddAllEventArgs.cs" />
+    <Compile Include="Interfaces\Database\HandHistoryAddedEventArgs.cs" />
+    <Compile Include="Interfaces\Database\HandHistoryDeletedAllEventArgs.cs" />
+    <Compile Include="Interfaces\Database\HandHistoryDeletedEventArgs.cs" />
+    <Compile Include="Interfaces\Database\IDatabaseConfiguration.cs" />
+    <Compile Include="Interfaces\Database\IHandHistoryDataContext.cs" />
+    <Compile Include="Interfaces\Database\IPersistable.cs" />
+    <Compile Include="Interfaces\Exceptions\DuplicateHandException.cs" />
+    <Compile Include="Interfaces\Extensions\EnumHelper.cs" />
+    <Compile Include="Interfaces\Extensions\HoldemExtensions.cs" />
+    <Compile Include="Interfaces\Generator\ICardGenerator.cs" />
+    <Compile Include="Interfaces\Generator\IDeckGenerator.cs" />
+    <Compile Include="Interfaces\Generator\INumberGenerator.cs" />
+    <Compile Include="Interfaces\Generator\IPrimitiveGenerator.cs" />
+    <Compile Include="Interfaces\HandHistory\HandHistoryExtension.cs" />
+    <Compile Include="Interfaces\HandHistory\History.cs" />
+    <Compile Include="Interfaces\HandHistory\IHandHistory.cs" />
+    <Compile Include="Interfaces\HandHistory\IHandHistoryDictionary.cs" />
+    <Compile Include="Interfaces\HandHistory\IHandHistoryGameInfo.cs" />
+    <Compile Include="Interfaces\HandHistory\IHandReplayInfo.cs" />
+    <Compile Include="Interfaces\IAccelerometerHelper.cs" />
+    <Compile Include="Interfaces\IAdProvider.cs" />
+    <Compile Include="Interfaces\Messages\DeckGeneratedMessage.cs" />
+    <Compile Include="Interfaces\Messages\DeletedCustomHandMessage.cs" />
+    <Compile Include="Interfaces\Messages\HandGeneratedRoundMessage.cs" />
+    <Compile Include="Interfaces\Messages\HandHistoryGeneratedMessage.cs" />
+    <Compile Include="Interfaces\Messages\HandHistoryLoadedMessage.cs" />
+    <Compile Include="Interfaces\Messages\Message.cs" />
+    <Compile Include="Interfaces\Messages\RoundGeneratedMessage.cs" />
+    <Compile Include="Interfaces\Messages\StartingHandGeneratedMessage.cs" />
+    <Compile Include="Interfaces\Model\AccelerometerHelperReadingEventArgs.cs" />
+    <Compile Include="Interfaces\Model\HoldemAboutTip.cs" />
+    <Compile Include="Interfaces\Model\HoldemAboutTipGeneratedEventArgs.cs" />
+    <Compile Include="Interfaces\Model\HoldemAceAgainstBiggerKickerEventArgs.cs" />
+    <Compile Include="Interfaces\Model\HoldemAgainstBiggerPairEventArgs.cs" />
+    <Compile Include="Interfaces\Model\HoldemDeckGeneratedEventArgs.cs" />
+    <Compile Include="Interfaces\Model\HoldemHandHistoryGeneratedEventArgs.cs" />
+    <Compile Include="Interfaces\Model\HoldemHandHistoryLoadedEventArgs.cs" />
+    <Compile Include="Interfaces\Model\HoldemPotOddsGeneratedEventArgs.cs" />
+    <Compile Include="Interfaces\Model\HoldemRunnerRunnerEventArgs.cs" />
+    <Compile Include="Interfaces\Model\HoldemStartingHandGeneratedEventArgs.cs" />
+    <Compile Include="Interfaces\Model\IHoldemAboutTipModel.cs" />
+    <Compile Include="Interfaces\Model\IHoldemCalculatorModel.cs" />
+    <Compile Include="Interfaces\Model\IHoldemHandHistoryModel.cs" />
+    <Compile Include="Interfaces\Model\IHoldemInformationModel.cs" />
+    <Compile Include="Interfaces\Model\IHoldemStatisticsPotOddsModel.cs" />
+    <Compile Include="Interfaces\Model\IIsVisible.cs" />
+    <Compile Include="Interfaces\Model\ISimple3DVector.cs" />
+    <Compile Include="Interfaces\Model\IStartingHandsContext.cs" />
+    <Compile Include="Interfaces\Model\IStartingHandsModel.cs" />
+    <Compile Include="Interfaces\Model\ScrollWheelItem.cs" />
+    <Compile Include="Interfaces\Model\Simple3DVector.cs" />
+    <Compile Include="Interfaces\Model\StartingHandsContext.cs" />
+    <Compile Include="Interfaces\Model\Statistics\IHoldemStatisticsKickerModel.cs" />
+    <Compile Include="Interfaces\Model\Statistics\IHoldemStatisticsPocketPairModel.cs" />
+    <Compile Include="Interfaces\Model\Statistics\IHoldemStatisticsRunnerModel.cs" />
+    <Compile Include="Interfaces\Provider\IIconProvider.cs" />
+    <Compile Include="Interfaces\ReplayEngineProviderMapping.cs" />
+    <Compile Include="Interfaces\ReplayEngine\IHandHistoryReplayEngine.cs" />
+    <Compile Include="Interfaces\ReplayEngine\IReplayEngine.cs" />
+    <Compile Include="Interfaces\ReplayEngine\IReplayEngineFactory.cs" />
+    <Compile Include="Interfaces\ReplayEngine\IReplayEngineHost.cs" />
+    <Compile Include="Interfaces\ReplayEngine\IReplayEngineInfo.cs" />
+    <Compile Include="Interfaces\ReplayEngine\IReplayEngineProvider.cs" />
+    <Compile Include="Interfaces\ReplayEngine\IReplayEngineStrategy.cs" />
+    <Compile Include="Interfaces\Resource\IHoldemResource.cs" />
+    <Compile Include="Interfaces\Security\IEncryptionProvider.cs" />
+    <Compile Include="Interfaces\Security\IScopeProvider.cs" />
+    <Compile Include="Interfaces\Security\ISecurityOptionsProvider.cs" />
+    <Compile Include="Interfaces\Security\ISkyDriveSecurityProvider.cs" />
+    <Compile Include="Interfaces\Security\KeysGeneratedEventArgs.cs" />
+    <Compile Include="Interfaces\Service\IFactory.cs" />
+    <Compile Include="Interfaces\Service\IGeneratorService.cs" />
+    <Compile Include="Interfaces\Service\IHoldemStatisticsService.cs" />
+    <Compile Include="Interfaces\Service\INavigationService.cs" />
+    <Compile Include="Interfaces\Service\IProviderService.cs" />
+    <Compile Include="Interfaces\Service\IReplayEngineService.cs" />
+    <Compile Include="Interfaces\SkyDrive\IWindowsLiveAuthorizationCode.cs" />
+    <Compile Include="Interfaces\SkyDrive\IWindowsLiveProfile.cs" />
+    <Compile Include="Interfaces\SkyDrive\SkyDriveDirectoryAddedEventArgs.cs" />
+    <Compile Include="Interfaces\SkyDrive\SkyDriveDirectoryInformation.cs" />
+    <Compile Include="Interfaces\SkyDrive\SkyDriveFileAddedEventArgs.cs" />
+    <Compile Include="Interfaces\SkyDrive\SkyDriveFileDownloadedEventArgs.cs" />
+    <Compile Include="Interfaces\SkyDrive\SkyDriveFileInformation.cs" />
+    <Compile Include="Interfaces\SkyDrive\WindowsLiveAuthorizationCodeEventArgs.cs" />
+    <Compile Include="Interfaces\SkyDrive\WindowsLiveAuthorizationFailedEventArgs.cs" />
+    <Compile Include="Interfaces\SkyDrive\WindowsLiveProfileEventArgs.cs" />
+    <Compile Include="Interfaces\StartingHands\ColorNames.cs" />
+    <Compile Include="Interfaces\StartingHands\ColorNamesExtension.cs" />
+    <Compile Include="Interfaces\StartingHands\DeletedCustomHandEventArgs.cs" />
+    <Compile Include="Interfaces\StartingHands\Hand.cs" />
+    <Compile Include="Interfaces\StartingHands\HandHighlight.cs" />
+    <Compile Include="Interfaces\StartingHands\HandStrength.cs" />
+    <Compile Include="Interfaces\StartingHands\IHand.cs" />
+    <Compile Include="Interfaces\StartingHands\IHandHighlight.cs" />
+    <Compile Include="Interfaces\StartingHands\IHandStrength.cs" />
+    <Compile Include="Interfaces\StartingHands\IStartingHand.cs" />
+    <Compile Include="Interfaces\StartingHands\IStartingHandsManager.cs" />
+    <Compile Include="Interfaces\StartingHands\StartingHand.cs" />
+    <Compile Include="Interfaces\StartingHands\StartingHandCardValue.cs" />
+    <Compile Include="Interfaces\StartingHands\StartingHandDeletedDescription.cs" />
+    <Compile Include="Interfaces\StartingHands\StartingHandSaveContext.cs" />
+    <Compile Include="Interfaces\StartingHands\StartingHandsSelectedHandEventArgs.cs" />
+    <Compile Include="Interfaces\Statistics\IFullHandStatsInfo.cs" />
+    <Compile Include="Interfaces\Statistics\IHandHistoryStats.cs" />
+    <Compile Include="Interfaces\Statistics\IHandKickerOptions.cs" />
+    <Compile Include="Interfaces\Statistics\IHandKickerStats.cs" />
+    <Compile Include="Interfaces\Statistics\IHandOptions.cs" />
+    <Compile Include="Interfaces\Statistics\IHandPocketPairOptions.cs" />
+    <Compile Include="Interfaces\Statistics\IHandPocketPairStats.cs" />
+    <Compile Include="Interfaces\Statistics\IHandRunnerRunnerOptions.cs" />
+    <Compile Include="Interfaces\Statistics\IHandRunnerRunnerStats.cs" />
+    <Compile Include="Interfaces\Statistics\IHandStats.cs" />
+    <Compile Include="Interfaces\Statistics\IHoleOdds.cs" />
+    <Compile Include="Interfaces\Statistics\IPocketPairOdds.cs" />
+    <Compile Include="Interfaces\Statistics\IPokerHandOdds.cs" />
+    <Compile Include="Interfaces\Statistics\IPotOdds.cs" />
+    <Compile Include="Interfaces\ViewModel\HandGeneratedRoundEventArgs.cs" />
+    <Compile Include="Interfaces\ViewModel\HoldemCardKickerEventArgs.cs" />
+    <Compile Include="Interfaces\ViewModel\StartingHandsLoadedEventArgs.cs" />
+    <Compile Include="MetroGridHelper.cs" />
+    <Compile Include="Model\HoldemAboutTipModel.cs" />
+    <Compile Include="Model\HoldemCalculatorModel.cs" />
+    <Compile Include="Model\HoldemHandHistoryModel.cs" />
+    <Compile Include="Model\HoldemHoleOddsModel.cs" />
+    <Compile Include="Model\HoldemInformationModel.cs" />
+    <Compile Include="Model\ScrollWheelItem.cs" />
+    <Compile Include="Model\StartingHandModel.cs" />
+    <Compile Include="Model\Statistics\HoldemStatisticsKickerModel.cs" />
+    <Compile Include="Model\Statistics\HoldemStatisticsPocketPairModel.cs" />
+    <Compile Include="Model\Statistics\HoldemStatisticsPotOddsModel.cs" />
+    <Compile Include="Model\Statistics\HoldemStatisticsRunnerModel.cs" />
+    <Compile Include="NavigationHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Content\About\AboutStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="Core\Controls\AboutTips.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Core\Controls\CircularProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Core\Controls\HoldemKickerSelector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Core\Controls\SplashPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Core\Controls\StartingHandsGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\AnimationStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="ReplayEngine\HandHistoryReplayEngineProvider.cs" />
+    <Compile Include="ReplayEngine\Holdem.ReplayEngine.PokerStars.cs" />
+    <Compile Include="ReplayEngine\HoldemHandHistoryJsonWriter.cs" />
+    <Compile Include="ReplayEngine\HoldemHandHistoryWriter.cs" />
+    <Compile Include="ReplayEngine\HoldemHandHistoryWriterBase.cs" />
+    <Compile Include="ReplayEngine\ReplayEngine.cs" />
+    <Compile Include="ReplayEngine\ReplayEngineDisplayNameStrategy.cs" />
+    <Compile Include="Service\Factory.cs" />
+    <Compile Include="Service\HoldemGeneratorService.cs" />
+    <Compile Include="Service\HoldemNavigationService.cs" />
+    <Compile Include="Service\HoldemProviderService.cs" />
+    <Compile Include="Service\HoldemStatisticsService.cs" />
+    <Compile Include="Service\Modules\HoldemCardThemeInjector.cs" />
+    <Compile Include="Service\Modules\HoldemModelInjector.cs" />
+    <Compile Include="Service\Modules\HoldemReplayEngineProviderInjector.cs" />
+    <Compile Include="Service\Modules\HoldemServiceCommonInjector.cs" />
+    <Compile Include="Service\Modules\HoldemServiceFactoryInjector.cs" />
+    <Compile Include="Service\Modules\HoldemViewModelInjector.cs" />
+    <Compile Include="Service\ViewModelLocator.cs" />
+    <Compile Include="TransitionPage.cs" />
+    <Page Include="Properties\DesignTimeResources.xaml" Condition="'$(DesignTime)'=='true' OR ('$(SolutionPath)'!='' AND Exists('$(SolutionPath)') AND '$(BuildingInsideVisualStudio)'!='true' AND '$(BuildingInsideExpressionBlend)'!='true')">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+    <Page Include="Resources\AppSpecific.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\BorderTransitions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\ControlStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Converter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\DarkThemeStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\DataStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\LightThemeStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\DataTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\StartingHandsViewStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\PageTransitions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="ViewModel\HoldemAboutViewModel.cs" />
+    <Compile Include="ViewModel\HoldemCalculatorViewModel.cs" />
+    <Compile Include="ViewModel\HoldemControlVisibilityConverter.cs" />
+    <Compile Include="ViewModel\HoldemHandHistoryViewModel.cs" />
+    <Compile Include="ViewModel\HoldemInformationViewModel.cs" />
+    <Compile Include="ViewModel\HoldemOddsViewModel.cs" />
+    <Compile Include="ViewModel\HoldemOptionsViewModel.cs" />
+    <Compile Include="ViewModel\HoldemSkyDriveViewModel.cs" />
+    <Compile Include="ViewModel\HoldemStartingHandsViewModel.cs" />
+    <Compile Include="ViewModel\HoldemStatsDoubleConverter.cs" />
+    <Compile Include="ViewModel\HoldemViewModelBase.cs" />
+    <Compile Include="ViewModel\HoldemViewModelCommandBase.cs" />
+    <Compile Include="ViewModel\HoldemViewModelVisibilityBase.cs" />
+    <Compile Include="ViewModel\Statistics\HoldemStatisticsBaseViewModel.cs" />
+    <Compile Include="ViewModel\Statistics\HoldemStatisticsKickerBaseViewModel.cs" />
+    <Compile Include="ViewModel\Statistics\HoldemStatisticsKickerViewModel.cs" />
+    <Compile Include="ViewModel\Statistics\HoldemStatisticsPocketPairViewModel.cs" />
+    <Compile Include="ViewModel\Statistics\HoldemStatisticsPotOddsViewModel.cs" />
+    <Compile Include="ViewModel\Statistics\HoldemStatisticsRunnerViewModel.cs" />
+    <Compile Include="View\AboutView.xaml.cs">
+      <DependentUpon>AboutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CalculatorView.xaml.cs">
+      <DependentUpon>CalculatorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HistoryView.xaml.cs">
+      <DependentUpon>HistoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HoleOddsView.xaml.cs">
+      <DependentUpon>HoleOddsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\OptionsMainView.xaml.cs">
+      <DependentUpon>OptionsMainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SkyDriveFileExplorerView.xaml.cs">
+      <DependentUpon>SkyDriveFileExplorerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SplashPage.xaml.cs">
+      <DependentUpon>SplashPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StartingHandsSelectionView.xaml.cs">
+      <DependentUpon>StartingHandsSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StartingHandsView.xaml.cs">
+      <DependentUpon>StartingHandsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StartingHands\StartingHandTemplate.xaml.cs">
+      <DependentUpon>StartingHandTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StatisticsView.xaml.cs">
+      <DependentUpon>StatisticsView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Core\Controls\Back.png" />
+    <EmbeddedResource Include="Core\Resource\HoldemResource.resx">
+      <DependentUpon>HoldemResource.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Controls\THC.RoyalFlush.Animation.jpg" />
+    <EmbeddedResource Include="Core\Controls\THC.RoyalFlush.Animation1.jpg" />
+    <Content Include="Core\Provider\CardImages\Backs\CardBack.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Core\Provider\CardImages\Backs\TexasHoldemCalcIcon.ico" />
+    <Content Include="Core\Provider\CardImages\Border\Backs\Back01.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Backs\Back02.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Backs\Back03.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Backs\Back04.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Backs\Back05.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Backs\Back06.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Backs\Back07.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Backs\Back08.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Backs\Back09.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Backs\Back10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Club\0c.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Club\10c.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Club\11c.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Club\12c.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Club\1c.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Club\2c.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Club\3c.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Club\4c.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Club\5c.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Club\6c.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Club\7c.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Club\8c.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Club\9c.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Diamond\0d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Diamond\10d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Diamond\11d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Diamond\12d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Diamond\1d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Diamond\2d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Diamond\3d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Diamond\4d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Diamond\5d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Diamond\6d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Diamond\7d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Diamond\8d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Diamond\9d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Heart\0h.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Heart\10h.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Heart\11h.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Heart\12h.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Heart\1h.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Heart\2h.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Heart\3h.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Heart\4h.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Heart\5h.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Heart\6h.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Heart\7h.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Heart\8h.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Heart\9h.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Spade\0s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Spade\10s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Spade\11s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Spade\12s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Spade\1s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Spade\2s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Spade\3s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Spade\4s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Spade\5s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Spade\6s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Spade\7s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Spade\8s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Border\Spade\9s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Provider\CardImages\Hands\StartingHandsA.bmp" />
+    <Content Include="Core\Provider\CardImages\Hands\StartingHandsB.bmp" />
+    <Content Include="Core\Provider\CardImages\Splash\THC.RoyalFlush.Animation.jpg" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\album.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\box_rar.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\box_zip.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\Clouds.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\Clouds_Blue.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\Clouds_Blue1.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\Clouds_light.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\Clouds1.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\DialogBackground.jpg" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\DialogBackground1.jpg" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\dreamstime_xs_2646593.jpg" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_aac.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_ai.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_avi.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_bin.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_bmp.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_cue.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_divx.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_doc.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_eps.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_flac.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_flv.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_gif.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_html.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_ical.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_indd.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_inx.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_iso.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_jpg.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_mov.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_mp3.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_mpg.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_pdf.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_php.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_png.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_pps.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_ppt.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_psd.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_qxd.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_qxp.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_raw.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_rtf.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_svg.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_tif.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_txt.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_vcf.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_wav.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_wma.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_xls.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\file_xml.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\folder_blue.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\folder_blue_backup.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\jewel_case.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\LevelUP.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\LevelUPLight.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\sunflare.jpg" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\sunflare1.jpg" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\TransparentBackground.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\Files\universal_binary.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\THC.Add.png" />
+    <EmbeddedResource Include="Core\Provider\Icons\THC.Minus.png" />
+    <EmbeddedResource Include="Core\Provider\StartingHands\Chris.Moneymaker.Top.40.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Provider\StartingHands\Expert.Insight.Starting.Hand.Guide.xml" />
+    <EmbeddedResource Include="Core\Provider\StartingHands\Little.Green.Book.Phil.Gordon.Average.Game.xml" />
+    <EmbeddedResource Include="Core\Provider\StartingHands\Little.Green.Book.Phil.Gordon.Loose.Game.xml" />
+    <EmbeddedResource Include="Core\Provider\StartingHands\Little.Green.Book.Phil.Gordon.Shorthanded.Game.xml" />
+    <EmbeddedResource Include="Core\Provider\StartingHands\Little.Green.Book.Phil.Gordon.Tight.Game.xml" />
+    <EmbeddedResource Include="Core\Provider\StartingHands\Starting.Hands.Sklansky.Basic.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Provider\StartingHands\Starting.Hands.Sklansky.Modified.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Provider\StartingHands\Visual.Poker.Chapter.4.Holdem.Poker.xml" />
+    <Content Include="Images\Icons\256\History.png" />
+    <Content Include="Images\Icons\256\Statistics.png" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+    <None Include="Core\Fonts\LiveSymbol.ttf" />
+    <None Include="Fonts\LiveSymbol.ttf" />
+    <None Include="Interfaces\Fonts\LiveSymbol.ttf" />
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml" />
+    <Content Include="TexasHoldemCalculator.log">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\About\Data.xml" />
+    <Content Include="Images\Icons\256\Blue.Calculator.png" />
+    <Content Include="Images\Icons\256\Blue.Folder.png" />
+    <Content Include="Images\Icons\256\Blue.Settings.png" />
+    <Content Include="Images\Icons\256\Blue.Stats.png" />
+    <Content Include="License\Ms-PL.txt" />
+    <Content Include="Images\Icons\48\appbar.back.rest.png" />
+    <Content Include="Images\Icons\48\appbar.check.rest.png" />
+    <Content Include="Images\Icons\48\appbar.close.rest.png" />
+    <Content Include="Images\Icons\48\appbar.next.rest.png" />
+    <Content Include="Images\Icons\32\Back.png" />
+    <Content Include="Images\Icons\256\Starting.Hands.png" />
+    <Content Include="Images\Icons\48\Herschel.Graph.png" />
+    <Content Include="Images\Icons\48\Starting.Hands.png" />
+    <Content Include="Images\Icons\48\Stats.Chart.png" />
+    <Content Include="License\CC-BY-NC-SA-30-Non-Ported.html" />
+    <Content Include="License\CC-BY-NC-SA-30-Non-Ported.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="View\AboutView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\CalculatorView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\HistoryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\HoleOddsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\OptionsMainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SkyDriveFileExplorerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SplashPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\StartingHandsSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\StartingHandsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <ApplicationDefinition Include="View\StartingHands\StartingHandTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="View\StatisticsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\packages\AppsListControl\Source\AppsListControl\AppsListControl.csproj">
+      <Project>{698FF406-9FA0-45F1-87A4-D653773B3E76}</Project>
+      <Name>AppsListControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>

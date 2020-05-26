@@ -1,0 +1,263 @@
+
+
+
+
+
+Texas Holdem Calculator 1.0.0.0 (stable)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Simply put the application aides in the calculation of pot/hand odds for Texas Hold’em 
+players.
+
+Contents
+Texas Holdem Calculator 1.0.0.0 (stable)	1
+Installation and Running	3
+Application Features	3
+Main Tab	3
+Pot Odds Calculator	4
+Hand Simulations	4
+Context Menu Options	5
+Options	5
+Exit	5
+Show Turn, River or Flop	6
+Stats Tab	6
+Runner-Runner Odds	6
+Ace and Card Against Bigger Ace Hole Cards	6
+Hands Tab	6
+Options Tab	7
+Hole Odds Tab	7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Installation and Running
+
+1.	Downloaded and extract the .cab from the following url:
+https://sourceforge.net/project/showfiles.php?group_id=239546&package_id=291
+930&release_id=629839)
+2.	Double-click and follow the on screen instructions.
+3.	Double-click the provided shortcut in the programs menu.  Alternatively you can 
+run the executable from “/Program Files/TexasHoldemCalculator.exe”.
+
+
+Application Features
+
+A splash screen will display while the calculator initializes.  Once the splash ends you will 
+be at the main calculator tab (labeled “Hand”).  The application consists of 5 tabs:
+
+1.	Hand – For current pot odds/hand odds and hand simulation.
+2.	Stats – Contains additional statistics, etc.
+3.	Hands – Some common starting hands to play.
+4.	Options – Currently empty.
+5.	Hole Odds – Odds for pocket pairs against various hands.
+
+
+
+Main Tab
+
+The main tab consists of the following areas:
+
+1.	5 pre-drawn game cards (burn cards have been removed), including the flop, turn 
+and river.
+2.	Pot size text box, this can be changed by clicking on it.
+3.	Bet size text box, this can be changed by clicking on it.
+4.	Number of outs text box, as with the pot and bet size this can be changed.
+5.	Pot/Bet percentage label
+6.	Hand odds ratio label.
+7.	Flop/Turn/River percentage labels.
+8.	Hole cards (displayed)
+9.	New hand button.
+
+
+
+Pot Odds Calculator
+
+   By clicking the pot size textbox an input dialog is displayed.  You can enter a new 
+value and click OK to accept or cancel to return to the previous one.  The same is true for 
+the bet size textbox and outs textbox.  However, the total number outs will be adjusted to 
+a max of 47 for outs greater than that amount, i.e. it’s not possible to have more than 47 
+outs.
+
+After entering any value the labels are adjusted accordingly:
+
+
+1.	Pot size shows the pot to bet ratio for example, pot of 10 and bet of 1 is a 10:1 
+ratio.
+2.	Bet size label is the maximum bet you can call based on your outs and the pot 
+size.
+3.	The hands odds label is your hand ratio showing how likely you are to draw to 
+a hand with the number of outs selected.  For example with 4 outs, and 
+precision set to 0, you are a 5:1 underdog to make your hand.
+4.	The make flop label is the hand odds as a percentage, for example with 4 outs 
+and being a 5:1 underdog you will make your hand on the flop 16% of the 
+time.
+5.	Similarly to the flop the turn shows how likely you are to make your hand by 
+percentage.  Using the flop numbers you will make your hand 9% of the time.
+6.	On the turn using the flop ratios you will make your hand 9% of the time.
+
+
+      When the percentage that you are likely to draw your out yields a positive 
+expectation, the Flop, River or Turn percentage label will show a green back color.  If it is 
+negative it will show as red.  This is an indicator that you will lose money in the long run 
+so you in most cases should not continue betting.
+      Similar to the hand odds back color the bet size textbox will be red if you the bet 
+you need to make is less than the maximum that you can call.  For example with 4 outs 
+and a Pot size of 500 with a bet to call of 125 you are a 5:1 underdog and will only hit 
+your hand 16% of the time, with precision set to 0.  Your maximum callable bet is 82 so 
+in this case you will lose money in the long run so the bet label would be red.  However, 
+if the bet was less than or equal to 82 in the worst case you would break even so your 
+expectation is zero.  Any bet less than the maximum would show a green label.
+      
+      
+      
+Hand Simulations
+
+The 5 pre-drawn cards, flop, turn and river are generated based on a simulated deal.  Also 
+the two hole cards follow this hand generation.  A random set of unique cards is dealt 
+every time the “New Hand” button is pressed.  Depending on the number of players dealt 
+to, the default is one, based on the menu setting; you will receive two consecutive cards 
+or the first card and the nth + 1 card.  For example for a two player deal you receive card 
+one and card 3.  When the flop, turn and river is dealt a burn card is removed to simulate 
+an actual Texas Hold’em game.  By simulating hands you can practice making decision 
+based on your pot odds to see if your skill are getting better or worse.
+
+
+
+Context Menu Options
+
+
+The context menu can be seen by pressing and holding in the “Hand” tab panel.  The 
+menu structure is as follows:
+ 
+1.	Menu
+a.	Options
+i.	Calc Precision
+1.	0, 1 and 2 digits
+ii.	Deck Theme
+1.	Border
+2.	Default
+3.	Simple
+4.	Small
+5.	Svg
+iii.	Players To Deal
+1.	1-9 players
+b.	Exit
+2.	Show [Flop/Turn/River]
+
+
+
+Options
+
+1.	Calc Precision – If 0 is selected pot odds and percentages are rounded to 
+whole numbers.  Otherwise they are rounded to the nearest tenths or 
+hundredths.
+2.	Deck Theme – Selecting of the themes changes the theme for the cards drawn.
+3.	Players To Deal – The cards you receive are based on dealing to 1-9 players.  
+The deck is randomly shuffled on every new hand deal.
+
+
+
+Exit
+
+Simply exist the application!
+
+
+Show Turn, River or Flop
+If this is a new deal, “Show Flop” will be available in which case the first three pre-drawn 
+cards are shown.  Similarly if it’s the flop, “Show Turn” is displayed and if it’s the turn, 
+“Show River” is displayed.  “Finish” is displayed after all cards have been shown.
+
+
+
+Stats Tab
+
+      The stats tab offers two additional statistics that can come into consideration 
+when playing Texas Hold’me.  Runner-runner odds and chance that your hole hand, 
+containing an Ace, is up against a bigger Ace.
+
+
+
+Runner-Runner Odds
+
+      This is simply the probability of making your hand with two consecutive outs 
+been drawn.  You simply make sure the outs on the “Hand” tab are set appropriately.  
+For example with 4 outs you are a 179:1 underdog, with precision set to 0, to draw two 
+consecutive outs to make your hand.
+
+
+
+Ace and Card Against Bigger Ace Hole Cards
+
+      This statistics is based on hole cards only.  Simply change the player’s textbox by 
+clicking and setting the appropriate number of players.  The textbox will automatically 
+adjust to 23 players if more are selected since it is impossible to deal to more with only 
+52 cards per deck.  After changing the number of outs, select your next whole card 2 – 
+King and the probability, ration and percent labels will automatically be calculated.  For 
+example, a set of hole cards A2 with 9 players has a probability of .65 or 65% chance of 
+facing an Ace with a larger kicker.
+      
+      
+      
+Hands Tab
+
+The hands tab contains two sets of recommended hands based on David Sklansky’s work.  
+The default is the modified which shows a tighter set of hands versus the basic which is 
+a list of all playable hands but not necessarily best in all positions.
+Options Tab
+
+Currently empty.
+
+
+Hole Odds Tab
+
+The Hold Odds tab shows a list of hole cards against various opposing hand rankings.  
+For example a High pocket pair versus a lower is an 80.3% favorite to 19.7% underdog.  
+These are useful in determining whether or not to call an All-In bet.
+Texas Holdem Calculator 1.0.0.0  
+2008
+
+Document version 1.0.0.0	Page 7
+

@@ -1,0 +1,104 @@
+﻿<Window x:Class="ThcStartingHandsGenerator.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:Controls="clr-namespace:HandGenerator.Controls;assembly=HandGenerator.Controls"
+        mc:Ignorable="d" 
+        Title="Starting Hand Generator"
+        Height="674" Width="770"> 
+    <Grid Name="MainPageGrid" Width="751">
+        <StackPanel Orientation="Vertical">
+            <Menu Name="GeneratorMenu" HorizontalAlignment="Stretch" Height="20" BorderBrush="{x:Null}">
+                <MenuItem Header="_File" InputGestureText="Ctrl+F">
+                    <MenuItem Header="_Load Hand" Click="LoadHandClick" />
+                    <MenuItem Header="_Save Hand" Click="SaveHandClick" />
+                    <MenuItem Header="_Reset to Default">
+                        <MenuItem Header="_Default" Click="ResetHandClick" />
+                        <MenuItem Header="All _Enabled" Click="ResetHandClick" />
+                        <MenuItem Header="All _Disabled" Click="ResetHandClick" />
+                    </MenuItem>
+                    <MenuItem Header="E_xit" Click="ExitMenuItemClick" />
+                </MenuItem>
+            </Menu>
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Height="550">
+                        <TextBox Text="{Binding Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                             HorizontalAlignment="Stretch" BorderThickness="0" />
+
+                        <Controls:StartingHandsGrid Name="StartingHandsGrid" Width="500" Height="520" Margin="4" />
+                    </StackPanel>
+                    <Border x:Name="HandOptionBorder" Background="Transparent" 
+                            BorderBrush="DarkBlue" BorderThickness="2,1,2,4" 
+                            Width="234" Height="533">
+                        <StackPanel Orientation="Vertical" Height="508" Margin="2">
+                            <ListBox Height="358" 
+                                     HorizontalAlignment="Stretch"
+                                     Name="StartingHandColorListBox" 
+                                     SelectedIndex="0"
+                                     ItemTemplate="{StaticResource StartingHandColorListBoxDataTemplate}"
+                                     ItemsSource="{Binding SupportedColors}" 
+                                     Style="{StaticResource HoldemColorListBoxStyle}" Width="214">
+                                <ListBox.ContextMenu>
+                                    <ContextMenu>
+                                        <MenuItem Header="Change Color to Selected?" Click="MenuItemClick" />
+                                    </ContextMenu>
+                                </ListBox.ContextMenu>
+                            </ListBox>
+                            <Controls:NumericBox x:Name="NumericUpDown"
+                                Value=
+                                    "{Binding 
+                                        Strength, 
+                                        Mode=TwoWay}"
+                                Background=
+                                    "{Binding 
+                                        ElementName=StartingHandColorListBox, 
+                                        Path=SelectedItem.ColorBrush,
+                                        Converter={StaticResource HighlightColorConverter}}" KeyDown="NumericUpDownKeyDown"
+                                Maximum="{Binding ColorCount}"
+                                Minimum="1" 
+                                FontFamily="Segoe WP" Height="71" Width="214" />
+
+                            <StackPanel VerticalAlignment="Stretch" Margin="0,2,0,0" Width="214">
+                                <ToggleButton x:Name="HandVisibleCheckBox" 
+                                              Content="Make Hand Visible?" 
+                                              IsChecked="{Binding IsVisible, Mode=TwoWay}" Height="25" />
+                                
+                                <!--CheckBox x:Name="HandVisibleCheckBox" 
+                                      Content="Make hand visible?" FontSize="14"
+                                      IsChecked="{Binding IsVisible, Mode=TwoWay}" /-->
+                                <!--Button x:Name="ApplyToAllColorsButton" 
+                                        Height="25" 
+                                        Content="Apply To All Colors" 
+                                        Click="ApplyToAllColorsButtonClick" /-->
+                                <ToggleButton x:Name="ApplyToAllColorsToggleButton" 
+                                              Click="ApplyToAllColorsToggleButtonClick"
+                                              Content="Apply To All Colors" 
+                                              Height="25" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,2,0,0" HorizontalAlignment="Center" Width="214">
+                                <Button Height="25" Width="105" Margin="0,0,2,0"
+                                    Content="Ok"
+                                    Click="HandSelectionOkClick" />
+                                <Button Height="25" Width="107"
+                                    Content="Cancel"
+                                    Click="HandSelectionCancelClick" HorizontalAlignment="Right" />
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+                <ListBox Height="60" Name="ColorPaletteListBox"
+                         ItemTemplate="{StaticResource StartingHandColorPaletteListBoxDataTemplate}"
+                         ItemsSource="{Binding CurrentPaletteColors}" 
+                         SelectionChanged="ColorPaletteListBoxSelectionChanged">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

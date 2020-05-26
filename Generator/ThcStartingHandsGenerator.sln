@@ -1,0 +1,186 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{7568AC85-9874-46FC-B401-69E30CAE1D68}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViewModel", "ViewModel", "{02262008-4B1D-4F5C-9C27-1ECCF2FA254B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{F402DE02-B2C0-47A8-B505-BD8539DC3CE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{2C95031C-CB0C-40A6-9546-D7822DD8BFFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{214B2F06-F326-4D52-A71E-8B84EE3E2EB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandGenerator.Controls", "Src\HandGenerator.Controls\HandGenerator.Controls.csproj", "{B054FF84-1382-4EDB-B39A-96B4E02A44D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandGenerator.Model", "Src\HandGenerator.Model\HandGenerator.Model.csproj", "{FD321267-7B4C-45EA-A2A5-E9ECD0692808}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandGenerator.Interfaces", "Src\HandGenerator.Interfaces\HandGenerator.Interfaces.csproj", "{C9235926-EE83-4D17-BB0F-7F941AE969FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.HandGenerator.ViewModel", "Src\Test.HandGenerator.ViewModel\Test.HandGenerator.ViewModel.csproj", "{D8FD4E7F-B0F8-44CD-816A-33C54395A096}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandGenerator.ViewModel", "Src\HandGenerator.ViewModel\HandGenerator.ViewModel.csproj", "{35881975-E2C5-4A9D-93B6-B959E9831198}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThcStartingHandsGenerator", "ThcStartingHandsGenerator.csproj", "{1ADB3216-CFBE-4CFC-A6EE-0B50A35A61B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandGenerator.Converter", "Src\HandGenerator.Converter\HandGenerator.Converter.csproj", "{5F4EE481-C1B2-423F-B80B-4B031F3D2913}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandGenerator.Entities", "Src\HandGenerator.Entities\HandGenerator.Entities.csproj", "{2C61BAED-70B7-4981-9A64-C4802D20F612}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandGenerator.Phone.Supported", "Src\HandGenerator.Phone.Supported\HandGenerator.Phone.Supported.csproj", "{BAF1AE15-59B1-4DDE-B04E-6F751592DCC8}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 10
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs18
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Src\\HandGenerator.Controls\\HandGenerator.Controls.csproj
+		SccProjectTopLevelParentUniqueName1 = ThcStartingHandsGenerator.sln
+		SccProjectName1 = Src/HandGenerator.Controls
+		SccLocalPath1 = Src\\HandGenerator.Controls
+		SccProjectUniqueName2 = Src\\HandGenerator.Model\\HandGenerator.Model.csproj
+		SccProjectTopLevelParentUniqueName2 = ThcStartingHandsGenerator.sln
+		SccProjectName2 = Src/HandGenerator.Model
+		SccLocalPath2 = Src\\HandGenerator.Model
+		SccProjectUniqueName3 = Src\\HandGenerator.Interfaces\\HandGenerator.Interfaces.csproj
+		SccProjectTopLevelParentUniqueName3 = ThcStartingHandsGenerator.sln
+		SccProjectName3 = Src/HandGenerator.Interfaces
+		SccLocalPath3 = Src\\HandGenerator.Interfaces
+		SccProjectUniqueName4 = Src\\Test.HandGenerator.ViewModel\\Test.HandGenerator.ViewModel.csproj
+		SccProjectTopLevelParentUniqueName4 = ThcStartingHandsGenerator.sln
+		SccProjectName4 = Src/Test.HandGenerator.ViewModel
+		SccLocalPath4 = Src\\Test.HandGenerator.ViewModel
+		SccProjectUniqueName5 = Src\\HandGenerator.ViewModel\\HandGenerator.ViewModel.csproj
+		SccProjectTopLevelParentUniqueName5 = ThcStartingHandsGenerator.sln
+		SccProjectName5 = Src/HandGenerator.ViewModel
+		SccLocalPath5 = Src\\HandGenerator.ViewModel
+		SccProjectUniqueName6 = ThcStartingHandsGenerator.csproj
+		SccLocalPath6 = .
+		SccProjectUniqueName7 = Src\\HandGenerator.Converter\\HandGenerator.Converter.csproj
+		SccProjectTopLevelParentUniqueName7 = ThcStartingHandsGenerator.sln
+		SccProjectName7 = Src/HandGenerator.Converter
+		SccLocalPath7 = Src\\HandGenerator.Converter
+		SccProjectUniqueName8 = Src\\HandGenerator.Entities\\HandGenerator.Entities.csproj
+		SccProjectTopLevelParentUniqueName8 = ThcStartingHandsGenerator.sln
+		SccProjectName8 = Src/HandGenerator.Entities
+		SccLocalPath8 = Src\\HandGenerator.Entities
+		SccProjectUniqueName9 = Src\\HandGenerator.Phone.Supported\\HandGenerator.Phone.Supported.csproj
+		SccProjectTopLevelParentUniqueName9 = ThcStartingHandsGenerator.sln
+		SccProjectName9 = Src/HandGenerator.Phone.Supported
+		SccLocalPath9 = Src\\HandGenerator.Phone.Supported
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B054FF84-1382-4EDB-B39A-96B4E02A44D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B054FF84-1382-4EDB-B39A-96B4E02A44D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B054FF84-1382-4EDB-B39A-96B4E02A44D0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B054FF84-1382-4EDB-B39A-96B4E02A44D0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B054FF84-1382-4EDB-B39A-96B4E02A44D0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B054FF84-1382-4EDB-B39A-96B4E02A44D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B054FF84-1382-4EDB-B39A-96B4E02A44D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B054FF84-1382-4EDB-B39A-96B4E02A44D0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B054FF84-1382-4EDB-B39A-96B4E02A44D0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B054FF84-1382-4EDB-B39A-96B4E02A44D0}.Release|x86.ActiveCfg = Release|Any CPU
+		{FD321267-7B4C-45EA-A2A5-E9ECD0692808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD321267-7B4C-45EA-A2A5-E9ECD0692808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD321267-7B4C-45EA-A2A5-E9ECD0692808}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{FD321267-7B4C-45EA-A2A5-E9ECD0692808}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{FD321267-7B4C-45EA-A2A5-E9ECD0692808}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FD321267-7B4C-45EA-A2A5-E9ECD0692808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD321267-7B4C-45EA-A2A5-E9ECD0692808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD321267-7B4C-45EA-A2A5-E9ECD0692808}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{FD321267-7B4C-45EA-A2A5-E9ECD0692808}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{FD321267-7B4C-45EA-A2A5-E9ECD0692808}.Release|x86.ActiveCfg = Release|Any CPU
+		{C9235926-EE83-4D17-BB0F-7F941AE969FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9235926-EE83-4D17-BB0F-7F941AE969FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9235926-EE83-4D17-BB0F-7F941AE969FA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C9235926-EE83-4D17-BB0F-7F941AE969FA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C9235926-EE83-4D17-BB0F-7F941AE969FA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C9235926-EE83-4D17-BB0F-7F941AE969FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9235926-EE83-4D17-BB0F-7F941AE969FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9235926-EE83-4D17-BB0F-7F941AE969FA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C9235926-EE83-4D17-BB0F-7F941AE969FA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C9235926-EE83-4D17-BB0F-7F941AE969FA}.Release|x86.ActiveCfg = Release|Any CPU
+		{D8FD4E7F-B0F8-44CD-816A-33C54395A096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8FD4E7F-B0F8-44CD-816A-33C54395A096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8FD4E7F-B0F8-44CD-816A-33C54395A096}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D8FD4E7F-B0F8-44CD-816A-33C54395A096}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D8FD4E7F-B0F8-44CD-816A-33C54395A096}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D8FD4E7F-B0F8-44CD-816A-33C54395A096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8FD4E7F-B0F8-44CD-816A-33C54395A096}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8FD4E7F-B0F8-44CD-816A-33C54395A096}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D8FD4E7F-B0F8-44CD-816A-33C54395A096}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D8FD4E7F-B0F8-44CD-816A-33C54395A096}.Release|x86.ActiveCfg = Release|Any CPU
+		{35881975-E2C5-4A9D-93B6-B959E9831198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35881975-E2C5-4A9D-93B6-B959E9831198}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35881975-E2C5-4A9D-93B6-B959E9831198}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{35881975-E2C5-4A9D-93B6-B959E9831198}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{35881975-E2C5-4A9D-93B6-B959E9831198}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{35881975-E2C5-4A9D-93B6-B959E9831198}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35881975-E2C5-4A9D-93B6-B959E9831198}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35881975-E2C5-4A9D-93B6-B959E9831198}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{35881975-E2C5-4A9D-93B6-B959E9831198}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{35881975-E2C5-4A9D-93B6-B959E9831198}.Release|x86.ActiveCfg = Release|Any CPU
+		{1ADB3216-CFBE-4CFC-A6EE-0B50A35A61B5}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{1ADB3216-CFBE-4CFC-A6EE-0B50A35A61B5}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{1ADB3216-CFBE-4CFC-A6EE-0B50A35A61B5}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{1ADB3216-CFBE-4CFC-A6EE-0B50A35A61B5}.Debug|x86.ActiveCfg = Debug|x86
+		{1ADB3216-CFBE-4CFC-A6EE-0B50A35A61B5}.Debug|x86.Build.0 = Debug|x86
+		{1ADB3216-CFBE-4CFC-A6EE-0B50A35A61B5}.Release|Any CPU.ActiveCfg = Release|x86
+		{1ADB3216-CFBE-4CFC-A6EE-0B50A35A61B5}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{1ADB3216-CFBE-4CFC-A6EE-0B50A35A61B5}.Release|Mixed Platforms.Build.0 = Release|x86
+		{1ADB3216-CFBE-4CFC-A6EE-0B50A35A61B5}.Release|x86.ActiveCfg = Release|x86
+		{1ADB3216-CFBE-4CFC-A6EE-0B50A35A61B5}.Release|x86.Build.0 = Release|x86
+		{5F4EE481-C1B2-423F-B80B-4B031F3D2913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F4EE481-C1B2-423F-B80B-4B031F3D2913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F4EE481-C1B2-423F-B80B-4B031F3D2913}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5F4EE481-C1B2-423F-B80B-4B031F3D2913}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5F4EE481-C1B2-423F-B80B-4B031F3D2913}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5F4EE481-C1B2-423F-B80B-4B031F3D2913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F4EE481-C1B2-423F-B80B-4B031F3D2913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F4EE481-C1B2-423F-B80B-4B031F3D2913}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5F4EE481-C1B2-423F-B80B-4B031F3D2913}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5F4EE481-C1B2-423F-B80B-4B031F3D2913}.Release|x86.ActiveCfg = Release|Any CPU
+		{2C61BAED-70B7-4981-9A64-C4802D20F612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C61BAED-70B7-4981-9A64-C4802D20F612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C61BAED-70B7-4981-9A64-C4802D20F612}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2C61BAED-70B7-4981-9A64-C4802D20F612}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2C61BAED-70B7-4981-9A64-C4802D20F612}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2C61BAED-70B7-4981-9A64-C4802D20F612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C61BAED-70B7-4981-9A64-C4802D20F612}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C61BAED-70B7-4981-9A64-C4802D20F612}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2C61BAED-70B7-4981-9A64-C4802D20F612}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2C61BAED-70B7-4981-9A64-C4802D20F612}.Release|x86.ActiveCfg = Release|Any CPU
+		{BAF1AE15-59B1-4DDE-B04E-6F751592DCC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF1AE15-59B1-4DDE-B04E-6F751592DCC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF1AE15-59B1-4DDE-B04E-6F751592DCC8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BAF1AE15-59B1-4DDE-B04E-6F751592DCC8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BAF1AE15-59B1-4DDE-B04E-6F751592DCC8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BAF1AE15-59B1-4DDE-B04E-6F751592DCC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF1AE15-59B1-4DDE-B04E-6F751592DCC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAF1AE15-59B1-4DDE-B04E-6F751592DCC8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BAF1AE15-59B1-4DDE-B04E-6F751592DCC8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BAF1AE15-59B1-4DDE-B04E-6F751592DCC8}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FD321267-7B4C-45EA-A2A5-E9ECD0692808} = {7568AC85-9874-46FC-B401-69E30CAE1D68}
+		{D8FD4E7F-B0F8-44CD-816A-33C54395A096} = {214B2F06-F326-4D52-A71E-8B84EE3E2EB6}
+		{B054FF84-1382-4EDB-B39A-96B4E02A44D0} = {F402DE02-B2C0-47A8-B505-BD8539DC3CE3}
+		{5F4EE481-C1B2-423F-B80B-4B031F3D2913} = {F402DE02-B2C0-47A8-B505-BD8539DC3CE3}
+		{2C61BAED-70B7-4981-9A64-C4802D20F612} = {F402DE02-B2C0-47A8-B505-BD8539DC3CE3}
+		{BAF1AE15-59B1-4DDE-B04E-6F751592DCC8} = {F402DE02-B2C0-47A8-B505-BD8539DC3CE3}
+		{35881975-E2C5-4A9D-93B6-B959E9831198} = {02262008-4B1D-4F5C-9C27-1ECCF2FA254B}
+		{C9235926-EE83-4D17-BB0F-7F941AE969FA} = {2C95031C-CB0C-40A6-9546-D7822DD8BFFE}
+	EndGlobalSection
+EndGlobal

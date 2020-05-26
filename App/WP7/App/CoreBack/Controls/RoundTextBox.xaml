@@ -1,0 +1,219 @@
+<UserControl x:Class="TexasHoldemCalculator.Core.Controls.RoundTextBox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:system="clr-namespace:System;assembly=mscorlib" mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <UserControl.Resources>
+
+        <LinearGradientBrush x:Key="GrayGradientBrush" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Offset="0" Color="Gray"/>
+            <GradientStop Offset="4" Color="White"/>
+        </LinearGradientBrush>
+
+        <system:Double x:Key="THCHistoryLargeValueFont">26</system:Double>
+
+        <Style x:Key="RoundTextBoxBorderStyle" TargetType="Border">
+            <Setter Property="CornerRadius" Value="8" />
+            <Setter Property="BorderBrush" Value="{StaticResource PhoneAccentBrush}" />
+            <Setter Property="BorderThickness" Value="3" />
+            <Setter Property="Background" Value="{StaticResource GrayGradientBrush}" />
+        </Style>
+
+        <Style x:Key="RoundTextBoxBorderDisableStyle" TargetType="Border">
+            <Setter Property="CornerRadius" Value="8" />
+            <Setter Property="BorderBrush" Value="{StaticResource PhoneDisabledBrush}" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Visibility" Value="Collapsed" />
+        </Style>
+
+        <Style x:Key="THCRoundTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilySemiLight}" />
+            <Setter Property="FontSize" Value="{StaticResource THCHistoryLargeValueFont}"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="{StaticResource PhoneChromeBrush}" />
+            <Setter Property="Width" Value="150" />
+            <Setter Property="Height" Value="55" />
+            <Setter Property="Foreground" Value="{StaticResource PhoneChromeBrush}" />
+        </Style>
+
+        <ControlTemplate x:Name="PhoneScrollViewerNoScrollBars" TargetType="ScrollViewer">
+            <ScrollContentPresenter x:Name="ScrollContentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" />
+        </ControlTemplate>
+        <ControlTemplate x:Key="PhoneDisabledTextBoxTemplate" TargetType="TextBox">
+            <ScrollViewer x:Name="ContentElement" BorderThickness="0" Margin="3,2" Padding="{TemplateBinding Padding}" Template="{StaticResource PhoneScrollViewerNoScrollBars}"/>
+        </ControlTemplate>
+        <ControlTemplate x:Key="TextBoxControlTemplate1" TargetType="TextBox">
+            <Grid Background="Transparent">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal"/>
+                        <VisualState x:Name="MouseOver"/>
+                        <VisualState x:Name="Disabled">
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="EnabledBorder" Storyboard.TargetProperty="Visibility">
+                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <Visibility>Collapsed</Visibility>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DisabledOrReadonlyBorder" Storyboard.TargetProperty="Visibility">
+                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <Visibility>Visible</Visibility>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="ReadOnly">
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="EnabledBorder" Storyboard.TargetProperty="Visibility">
+                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <Visibility>Collapsed</Visibility>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DisabledOrReadonlyBorder" Storyboard.TargetProperty="Visibility">
+                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <Visibility>Visible</Visibility>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DisabledOrReadonlyBorder" Storyboard.TargetProperty="Background">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneSubtleBrush}" />
+                                </ObjectAnimationUsingKeyFrames>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DisabledOrReadonlyBorder" Storyboard.TargetProperty="BorderBrush">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneSubtleBrush}" />
+                                </ObjectAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="FocusStates">
+                        <VisualState x:Name="Focused"/>
+                        <VisualState x:Name="Unfocused"/>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+                <Border x:Name="EnabledBorder" Background="{StaticResource TransparentBrush}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{StaticResource TransparentBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <ScrollViewer x:Name="ContentElement" BorderThickness="0" Margin="0"
+							Template="{StaticResource PhoneScrollViewerNoScrollBars}" Foreground="{StaticResource PhoneAccentBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Border>
+                <Border x:Name="DisabledOrReadonlyBorder" Visibility="Collapsed" Background="Transparent" BorderBrush="{StaticResource PhoneDisabledBrush}" BorderThickness="{TemplateBinding BorderThickness}" Margin="{StaticResource PhoneTouchTargetOverhang}" >
+                    <TextBox Text="{TemplateBinding Text}" Foreground="{StaticResource PhoneDisabledBrush}" Background="Transparent"
+							SelectionBackground="{TemplateBinding SelectionBackground}" SelectionForeground="{TemplateBinding SelectionForeground}"
+							TextWrapping="{TemplateBinding TextWrapping}" TextAlignment="{TemplateBinding TextAlignment}" IsReadOnly="True" Template="{StaticResource PhoneDisabledTextBoxTemplate}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+            </Grid>
+        </ControlTemplate>
+        <Style x:Key="RoundTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid Background="Transparent">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="EnabledBorder">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Collapsed</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="DisabledOrReadonlyBorder">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Visible</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="ReadOnly">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="EnabledBorder">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Collapsed</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="DisabledOrReadonlyBorder">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Visible</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="DisabledOrReadonlyBorder">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneSubtleBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="DisabledOrReadonlyBorder">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneSubtleBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="EnabledBorder">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneContrastBackgroundBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="EnabledBorder">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneContrastBackgroundBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Border x:Name="EnabledBorder" Style="{StaticResource RoundTextBoxBorderStyle}">
+                                <!--ScrollViewer x:Name="ContentElement" HorizontalAlignment="Center" VerticalAlignment="Center" /-->
+                                <TextBox Text="{TemplateBinding Text}"
+										Template="{StaticResource TextBoxControlTemplate1}" 
+										Foreground="{StaticResource PhoneChromeBrush}" 
+										FontSize="21.333" 
+										BorderThickness="0" 
+										HorizontalContentAlignment="Stretch" 
+										VerticalContentAlignment="Stretch" 
+										Padding="0" 
+										TextAlignment="Center" />
+                            </Border>
+                            <Border x:Name="DisabledOrReadonlyBorder" Style="{StaticResource RoundTextBoxBorderDisableStyle}">
+                                <TextBox Background="Transparent" 
+										Foreground="{StaticResource PhoneDisabledBrush}" IsReadOnly="True" 
+										SelectionForeground="{TemplateBinding SelectionForeground}" 
+										SelectionBackground="{TemplateBinding SelectionBackground}" 
+										TextAlignment="{TemplateBinding TextAlignment}" 
+										TextWrapping="{TemplateBinding TextWrapping}" 
+										Text="{TemplateBinding Text}" 
+										Template="{StaticResource PhoneDisabledTextBoxTemplate}"/>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <TextBox x:Name="InnerTextBox" Style="{StaticResource RoundTextBoxStyle}" Text="Test Control Text" />
+    </Grid>
+</UserControl>

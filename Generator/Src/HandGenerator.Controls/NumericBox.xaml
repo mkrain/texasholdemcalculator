@@ -1,0 +1,43 @@
+﻿<UserControl 
+	x:Class="HandGenerator.Controls.NumericBox"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" mc:Ignorable="d" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        Focusable="True" GotFocus="BorderGotFocus">
+		<Border Style="{Binding}" 
+                BorderBrush="{Binding}" 
+                CornerRadius="{Binding}" 
+                BorderThickness="{Binding}">
+            <StackPanel Orientation="Vertical" 
+                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="3">
+                <TextBox Margin="2" BorderThickness="0"
+					     Name="TextBoxValue"
+					     PreviewTextInput="ValuePreviewTextInput"
+					     TextChanged="ValueTextChanged"
+					     PreviewKeyDown="ValuePreviewKeyDown"
+					     TextAlignment="Center" 
+					     VerticalContentAlignment="Center" 
+					     HorizontalContentAlignment="Center" 
+                         Text="12345678" FontSize="24"
+					     Background="Transparent" />
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="2"
+                        Width= 
+                            "{Binding 
+                                ElementName=TextBoxValue, 
+                                Path=Width}" >
+                    <Button Margin="2" Width="40" Height="20"
+					    x:Name="Increase"
+					    Click="IncreaseClick" VerticalAlignment="Top">
+                        <Image Source="Images/up.png" Height="7" Width="13" />
+                    </Button>
+                    <Button Margin="2" Width="40" Height="20"
+					    x:Name="Decrease"
+					    Click="DecreaseClick" VerticalAlignment="Top">
+                        <Image Source="Images/down.png" Height="7" Width="13" />
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+		</Border>
+</UserControl>

@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <ItemsPanelTemplate x:Name="CardTemplate">
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center" />
+    </ItemsPanelTemplate>
+    
+    <DataTemplate x:Name="CardPanel">
+        <Button Style="{StaticResource THCCardOverlayStyle}"
+                Command="{Binding Path=DataContext.CardCommand, ElementName=LayoutRoot}"
+                CommandParameter="{Binding}"
+                Margin="2"
+                BorderThickness="0">
+            <Button.Content>
+                <Image Source="{Binding UriSource}"
+                       Style="{StaticResource THCCardStyle}" />
+            </Button.Content>
+        </Button>
+    </DataTemplate>
+    
+</ResourceDictionary>

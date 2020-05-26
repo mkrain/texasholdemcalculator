@@ -1,0 +1,56 @@
+<UserControl x:Class="TexasHoldemCalculator.Core.Controls.HoldemHoleCardsControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+    <UserControl.Resources>
+        <Style x:Key="THCCardStyle" TargetType="Image">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Stretch" Value="Fill" />
+            <Setter Property="Height" Value="118" />
+            <Setter Property="Width" Value="84" />
+            <Setter Property="Source" Value="Back.png" />
+        </Style>
+    </UserControl.Resources>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualStateGroup.Transitions>
+                <VisualTransition>
+                    <Storyboard x:Name="AnimateHoleCardOne">
+                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="HoleCardOne" Storyboard.TargetProperty="(UIElement.Opacity)">
+                            <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                            <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.249996" />
+                            <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.5" />
+                            <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.75" />
+                            <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1" />
+                        </DoubleAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualTransition>
+                <VisualTransition>
+                    <Storyboard x:Name="AnimateHoleCardTwo">
+                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="HoleCardTwo" Storyboard.TargetProperty="(UIElement.Opacity)">
+                            <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                            <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.249996" />
+                            <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.5" />
+                            <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.75" />
+                            <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1" />
+                        </DoubleAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualTransition>
+            </VisualStateGroup.Transitions>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+    <StackPanel x:Name="HoldemHoleStackPanel"
+                HorizontalAlignment="{Binding HorizontalAlignment}"
+                DataContext="{Binding}"
+                Orientation="{Binding Orientation}">
+        <Image x:Name="HoleCardOne" Margin="2" Source="{Binding ItemSource[0]}" Style="{StaticResource THCCardStyle}" />
+        <Image x:Name="HoleCardTwo" Margin="2" Source="{Binding ItemSource[1]}" Style="{StaticResource THCCardStyle}" />
+    </StackPanel>
+</UserControl>

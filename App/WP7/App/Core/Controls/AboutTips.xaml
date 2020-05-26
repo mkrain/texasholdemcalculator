@@ -1,0 +1,83 @@
+<UserControl x:Class="TexasHoldemCalculator.Core.Controls.AboutTips"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+             mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <UserControl.Resources>
+        <Style x:Key="TipsTextBoxStyle" TargetType="TextBox">
+            <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilyNormal}"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Background" Value="{StaticResource PhoneTextBoxBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource PhoneAccentBrush}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource PhoneTextBoxBrush}"/>
+            <Setter Property="BorderThickness" Value="{StaticResource PhoneAccentBrush}"/>
+            <Setter Property="Width" Value="410"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid Background="Transparent">
+                            <Border x:Name="EnabledBorder" 
+                                    BorderBrush="{TemplateBinding BorderBrush}">
+                                <ContentControl x:Name="ContentElement" 
+                                                HorizontalContentAlignment="Stretch" 
+                                                Padding="{TemplateBinding Padding}" 
+                                                VerticalContentAlignment="Stretch" />
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <DataTemplate x:Name="ListBoxDataTemplate">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="18*" />
+                    <ColumnDefinition Width="480*" />
+                </Grid.ColumnDefinitions>
+
+                <Ellipse Grid.Column="0" Width="15" Height="15" Fill="White" />
+                <TextBox Grid.Column="1" Margin="8,0,0,0" Width="380"
+                         TextWrapping="Wrap" IsReadOnly="True"
+                         Text="{Binding}"
+                         Style="{StaticResource TipsTextBoxStyle}" />
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Name="THCOddsExpanderDataTemplateNormal">
+            <TextBox TextWrapping="Wrap" FontSize="20" IsReadOnly="True"
+                     Foreground="White"
+                     Text="{Binding SummaryText}"
+                     Style="{StaticResource TipsTextBoxStyle}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="THCOddsHeaderTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding DisplayIcon}" />
+                <TextBlock FontSize="30" 
+                           Text="{Binding HeaderText}"
+                           Style="{StaticResource THCStatsLargeHeaderText}" />
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Name="THCTipsItemTemplate">
+            <toolkit:ExpanderView Header="{Binding}" 
+                                  Expander="{Binding}"
+                                  ItemsSource="{Binding}"
+                                  IsExpanded="{Binding IsExpanded, Mode=TwoWay}"
+                                  HeaderTemplate="{StaticResource THCOddsHeaderTemplate}"
+                                  ExpanderTemplate="{StaticResource THCOddsExpanderDataTemplateNormal}" 
+                                  Width="480">
+                <ListBox ItemsSource="{Binding Tips}"
+            		ItemTemplate="{StaticResource ListBoxDataTemplate}" />
+            </toolkit:ExpanderView>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <ListBox ItemsSource="{Binding Tips}"
+                 ItemTemplate="{StaticResource THCTipsItemTemplate}" />
+    </Grid>
+</UserControl>

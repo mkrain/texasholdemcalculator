@@ -1,0 +1,72 @@
+﻿<controls1:PhoneApplicationPage x:Class="TexasHoldemCalculator.View.CalculatorView"
+                                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                                xmlns:controls1="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                                xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                                xmlns:my="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
+                                x:Name="CalculatorViewPage"
+                                ApplicationBar="{StaticResource GlobalApplicationBar}"
+                                d:DesignHeight="800"
+                                d:DesignWidth="480"
+                                DataContext="{Binding Main, Source={StaticResource Locator}}"
+                                Style="{StaticResource DefaultPageTransition}"
+                                SupportedOrientations="Portrait"
+                                mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="480*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="145" />
+                <RowDefinition Height="165" />
+                <RowDefinition Height="125" />
+                <RowDefinition Height="135" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="85" />
+            </Grid.RowDefinitions>
+
+            <ItemsControl HorizontalAlignment="Center" 
+                          ItemsPanel="{StaticResource CardTemplate}"
+                          ItemTemplate="{StaticResource CardPanel}"
+                          ItemsSource="{Binding Path=HoldemHandCards}" />
+            
+            <TextBlock x:Name="RankingTextBlock"
+                       Grid.Row="1"
+                       Style="{StaticResource THCStatsLargeHeaderText}"
+                       Text="{Binding HandValuation}"
+                       Visibility="{Binding HandRankVisibility}" />
+
+            <ItemsControl Grid.Row="2" 
+                          HorizontalAlignment="Center" 
+                          ItemsPanel="{StaticResource CardTemplate}"
+                          ItemTemplate="{StaticResource CardPanel}"
+                          ItemsSource="{Binding Path=HoldemHoleCards}" />
+            
+            <Button x:Name="NewHandButton"
+                    Grid.Row="3"
+                    Width="155"
+                    Height="55"
+                    Content="New Hand"
+                    Style="{StaticResource RoundButtonStyle}" Command="{Binding GenerateHandCommand}" />
+
+            <ToggleButton x:Name="HoldemHandValuation"
+                          Grid.Row="4"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Center"
+                          BorderBrush="{StaticResource THCTransparentBrush}"
+                          BorderThickness="0"
+                          Content="[ Show Best Hand ]"
+                          IsChecked="{Binding IsHandRankVisible, Mode=TwoWay}" />
+
+            <my:AdControl x:Name="THCStatisticsAd"
+                          Grid.Row="5"
+                          Width="{Binding Width}"
+                          Height="{Binding Height}"
+                          Margin="0"
+                          VerticalAlignment="Center"
+                          DataContext="{Binding Source={StaticResource Locator}, Path=AdProvider}" />
+        </Grid>
+    </Grid>
+</controls1:PhoneApplicationPage>

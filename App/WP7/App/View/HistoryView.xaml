@@ -1,0 +1,160 @@
+﻿<controls:PhoneApplicationPage x:Class="TexasHoldemCalculator.View.HistoryView" 
+                               xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                               xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                               xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                               xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                               xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                               xmlns:my="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
+                               x:Name="HistoryViewPage"
+                               ApplicationBar="{StaticResource GlobalApplicationBar}"
+                               d:DesignHeight="800" d:DesignWidth="480"
+                               DataContext="{Binding HandHistory, Source={StaticResource Locator}}"
+                               Style="{StaticResource DefaultPageTransition}"
+                               SupportedOrientations="Portrait" mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="480*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="145" />
+            <RowDefinition Height="165" />
+            <RowDefinition Height="125" />
+            <RowDefinition Height="135" />
+            <RowDefinition Height="70" />
+            <RowDefinition Height="85" />
+        </Grid.RowDefinitions>
+
+        <ItemsControl HorizontalAlignment="Center" 
+                      ItemsPanel="{StaticResource CardTemplate}"
+                      ItemTemplate="{StaticResource CardPanel}"
+                      ItemsSource="{Binding Path=HoldemHandCards}" />
+
+        <Grid x:Name="HistoryTournamentGrid" Grid.Row="1"
+              d:IsHidden="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="84" />
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="HistoryDescriptionLabel" Grid.Row="0"
+                       Height="40" HorizontalAlignment="Stretch"
+                       VerticalAlignment="Stretch"
+                       Style="{StaticResource THCHistoryHeaderStyle}"
+                       Text="{Binding TournamentLabel}" />
+            <TextBlock x:Name="HistoryHandIndexLabel" Grid.Row="1"
+                       Height="40" HorizontalAlignment="Stretch"
+                       VerticalAlignment="Stretch"
+                       Style="{StaticResource THCHistoryHeaderStyle}"
+                       Text="{Binding HandRangeLabel}" />
+
+            <Grid x:Name="HistoryTournamentInfoGrid" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="240" />
+                    <ColumnDefinition Width="240" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="42" />
+                    <RowDefinition Height="42" />
+                </Grid.RowDefinitions>
+
+                <!--  History Game Id Label  -->
+                <TextBlock x:Name="HistoryGameIdLabel" Grid.Row="0"
+                           Grid.Column="0" Height="40"
+                           VerticalAlignment="Stretch"
+                           Style="{StaticResource THCHistorySmallHeaderStyle}"
+                           Text="Game Id:" />
+                <!--  History Date Time Label  -->
+                <TextBlock x:Name="HistoryDateTimeLabel" Grid.Row="1"
+                           Grid.Column="0" Height="40"
+                           VerticalAlignment="Stretch"
+                           Style="{StaticResource THCHistorySmallHeaderStyle}"
+                           Text="Date/Time:" />
+
+                <!--  History Game Id Data  -->
+                <TextBlock x:Name="HistoryGameIdData" Grid.Row="0"
+                           Grid.Column="1" Height="40"
+                           HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                           Style="{StaticResource THCHistoryMediumValueStyle}"
+                           Text="1234567890" />
+                <!--  History Date Time Data  -->
+                <TextBlock x:Name="HistoryDateTimeData" Grid.Row="1"
+                           Grid.Column="1" Height="40"
+                           HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                           Style="{StaticResource THCHistoryMediumValueStyle}"
+                           Text="1234567890" />
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="HistoryHandNavigationSkipGrid" Grid.Row="2"
+              HorizontalAlignment="Center" d:IsHidden="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130" />
+                <ColumnDefinition Width="94*" />
+                <ColumnDefinition Width="130" />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="HandHistoryPreviousButton" Grid.Column="0"
+                    Width="48" Height="48"
+                    Margin="0"
+                    IsEnabled="{Binding HistoryLoaded}"
+                    Style="{StaticResource RoundButtonCircleStyle}" Command="{Binding PreviousHistoryCommand}">
+                <Image x:Name="HandPreviousImage" HorizontalAlignment="Center"
+                       Source="../Images/Icons/48/appbar.back.rest.png" />
+            </Button>
+            <Button x:Name="HandHistoryNextButton" Grid.Column="2"
+                    Width="48" Height="48"
+                    IsEnabled="{Binding HistoryLoaded}"
+                    Style="{StaticResource RoundButtonCircleStyle}" Command="{Binding NextHistoryCommand}">
+                <Image x:Name="HandNextImage" HorizontalAlignment="Center"
+                       Source="../Images/Icons/48/appbar.next.rest.png" />
+            </Button>
+
+            <ItemsControl Grid.Column="1" 
+                          HorizontalAlignment="Center" 
+                          ItemsPanel="{StaticResource CardTemplate}"
+                          ItemTemplate="{StaticResource CardPanel}"
+                          ItemsSource="{Binding Path=HoldemHoleCards}" />
+        </Grid>
+
+        <TextBox x:Name="HistorySkipButton" Grid.Row="3"
+                 Height="55" Margin="4"
+                 HorizontalAlignment="Center" d:IsHidden="True"
+                 GotFocus="SkipTextBoxGotFocus" InputScope="Digits"
+                 IsEnabled="{Binding HistoryLoaded}"
+                 Style="{StaticResource THCDataTextBoxStyle}"
+                 Template="{StaticResource THCTextboxEntry}"
+                 Text="{Binding CurrentHandIndex,
+                                Mode=TwoWay,
+                                Converter={StaticResource IntConverter}}" />
+
+        <StackPanel Grid.Row="4" HorizontalAlignment="Center"
+                    Orientation="Horizontal">
+            <Button x:Name="HistoryStatButton" Width="90"
+                    Height="55" Margin="4"
+                    Content="Stats"
+                    IsEnabled="{Binding StatsEnabled}"
+                    Style="{StaticResource RoundButtonStyle}" 
+                    Command="{Binding LoadHandHistoryStatsCommand}" />
+            <Button x:Name="HistoryLoadButton" Width="90"
+                    Height="55" Margin="4"
+                    Content="Load"
+                    IsEnabled="{Binding HistoryEnabled}"
+                    Style="{StaticResource RoundButtonStyle}" Command="{Binding LoadHandHistoryCommand}" />
+        </StackPanel>
+
+        <my:AdControl x:Name="THCHistoryAd" Grid.Row="5"
+                      Width="{Binding Width}"
+                      Height="{Binding Height}"
+                      Margin="0" VerticalAlignment="Center"
+                      DataContext="{Binding Source={StaticResource Locator}, Path=AdProvider}" />
+
+        <ItemsControl x:Name="HistorySelectionPopup" Grid.RowSpan="6"
+                      DataContext="{Binding Source={StaticResource Locator}, Path=HandHistory}"
+                      Template="{StaticResource HistoryPopupBorder}"
+                      Visibility="{Binding Visibility}" />
+    </Grid>
+</controls:PhoneApplicationPage>
